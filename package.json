@@ -1,0 +1,23 @@
+{
+  "name": "clastestsuite",
+  "version": "1.0.0",
+  "description": "ASU CLAS Test Suite",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabemartinez/clastestsuite.git"
+  },
+  "author": "Gabriel Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabemartinez/clastestsuite/issues"
+  },
+  "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
