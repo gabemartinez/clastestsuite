@@ -4,7 +4,7 @@
   "description": "ASU CLAS Test Suite",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "case": "^1.5.2",
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "request": "^2.81.0"
   }
 }
