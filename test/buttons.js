@@ -1,13 +1,9 @@
-describe("Sentence Casing Check", function() {
+log = console.log
+expect = require("chai").expect
+should = require("chai").should()
+_ = require("lodash")
 
-  it('should have sentence casing', function() {
-    // Test implementation goes here
-  });
+describe("#mocha basics", ())
 
-  describe("RGB to Hex conversion", function() {
-  it("converts the basic colors", function() {
-
-  });
-});
-
-});
+// var mocha = require("mocha")
+// var chai = ("chai");

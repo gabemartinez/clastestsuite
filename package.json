@@ -4,7 +4,7 @@
   "description": "ASU CLAS Test Suite",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "mocha buttons.js"
   },
   "repository": {
     "type": "git",
