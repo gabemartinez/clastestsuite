@@ -7,6 +7,7 @@ casper.options.clientScripts.push("/Users/gabrielmartinez/Desktop/Projects/nodeW
 
 
 var url = casper.cli.get("url");
+// or casper.cli.get(ARGNUMBER)
 // var url = process.argv[3];
 
 var Case = require('case');
