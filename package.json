@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
   "dependencies": {
+    "backstopjs": "^2.6.11",
     "body-parser": "^1.17.1",
     "case": "^1.5.2",
     "chai": "^3.5.0",
