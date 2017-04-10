@@ -2,25 +2,35 @@
   "id": "clas_prod_test",
   "viewports": [
     {
-      "name": "phone",
-      "width": 320,
-      "height": 480
-    },
-    {
-      "name": "tablet_v",
-      "width": 568,
-      "height": 1024
-    },
-    {
-      "name": "tablet_h",
-      "width": 1024,
+      "name": "1366x768",
+      "width": 1366,
       "height": 768
+    },
+    {
+      "name": "1920x1080",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "name": "1440x900",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "name": "1280x800",
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "name": "375x667",
+      "width": 375,
+      "height": 667
     }
   ],
   "scenarios": [
     {
       "label": "CLAS Homepage",
-      "url": "https://gabe-clas3.ws.asu.edu/",
+      "url": "https://cdionfix-clas3.ws.asu.edu/",
       "hideSelectors": [],
       "removeSelectors": [],
       "selectorExpansion": true,
@@ -28,6 +38,9 @@
         "#header",
         "#ASUNavMenu",
         ".hero-wrapper",
+        ".paragraphs-item-clas-number-highlighter",
+        ".beast-triple-column",
+        ".cta-section",
         "#block-mega-footer-mega-footer",
         "#innovation-footer"
       ],
