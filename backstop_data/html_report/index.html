@@ -20,7 +20,7 @@
   <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + alert.type"
        dismiss-on-timeout="2000" close="closeAlert($index)">{{alert.msg}}</div>
 
-  <h1>Visual Regression Test</h1>
+  <h1>{{name}} Report</h1>
 
   <h3 class="statContainer">
     <span class="stat">Passed <span class='label label-success'>{{passedCount}}</span>&nbsp;&nbsp; Failed <span class='label label-danger'>{{testPairs.length-passedCount}}</span></span>

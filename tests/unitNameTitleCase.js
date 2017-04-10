@@ -12,7 +12,7 @@ request(url, function (error, response, html) {
     var unitTitle = $( "div.header__sitename > span" ).text();
     var thisCase = Case.of(unitTitle);
     //console.log(thisCase);
-    if (thisCase == "titldde"){
+    if (thisCase == "title"){
       //var pf = "PASS";
       process.stdout.write("Unit Name Text: " + unitTitle.trim() + " / PASS-FAIL: " + chalk.bold.green("PASS \n"));
     } else {
