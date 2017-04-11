@@ -61,5 +61,8 @@ typings/
 # dotenv environment variables file
 .env
 
+*.png
+*.jpg
+
 
 # End of https://www.gitignore.io/api/node

@@ -4,7 +4,7 @@
   "description": "ASU CLAS Test Suite",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha buttons.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,16 @@
   },
   "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
   "dependencies": {
+    "backstopjs": "^2.6.11",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "case": "^1.5.2",
+    "chai": "^3.5.0",
+    "chalk": "^1.1.3",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "mocha": "^3.2.0",
+    "phantomcss": "^1.1.5",
+    "request": "^2.81.0"
   }
 }
