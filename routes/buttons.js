@@ -3,7 +3,7 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 
-var buttoncheck = require('../tests/buttonsTextSentenceCasing')
+var buttoncheck = require('../tests/buttonsTextSentenceCasing');
 
 // create application/json parser
 var jsonParser = bodyParser.json();
@@ -12,12 +12,12 @@ var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // custom middleware
-function checkButtons(req, res, next) {
-  console.log("blakkow middleware mofo");
-  next();
-};
+// function checkButtons(req, res, next) {
+//   console.log("blakkow middleware mofo");
+//   next();
+// };
 
-app.use(checkButtons);
+// app.use(checkButtons);
 
 /* GET buttons page. */
 router.get('/', function(req, res, next) {
@@ -25,9 +25,10 @@ router.get('/', function(req, res, next) {
 });
 
 // POST /buttons gets urlencoded bodies
-router.post('/', urlencodedParser,  checkButtons, buttoncheck, function (req, res, next) {
+router.post('/', urlencodedParser, buttoncheck, function (req, res, next) {
   var page = req.body.page;
-  res.render('buttons-success', { page: page });
+  var pf = req.pf;
+  res.render('buttons-success', { page: page, pf: pf });
 });
 
 module.exports = router;

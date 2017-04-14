@@ -7,5 +7,17 @@
   <body>
     <h1>Button Test Results</h1>
     <p>You are testing: <%= page %></p>
+    <p>Buttons on page: <%= pf.length %></p>
+
+    <table>
+    <% for(var i=0; i < pf.length; i++) { %>
+       <tr>
+         <td><%= pf[i].text %></td>
+         <td><%= pf[i].casing %></td>
+         <td><%= pf[i].passfail %></td>
+       </tr>
+    <% } %>
+    </table>
+
   </body>
 </html>
