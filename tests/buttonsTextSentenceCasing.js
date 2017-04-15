@@ -1,11 +1,11 @@
 var buttoncheck = function(req, res, next) {
   // Do something.
-  console.log('buttoncheck mofo!');
+  //console.log('buttoncheck mofo!');
 
-  var request = require('request')
-  var cheerio = require('cheerio')
-  var Case = require('case')
-  var chalk = require('chalk')
+  var request = require('request');
+  var cheerio = require('cheerio');
+  var Case = require('case');
+  var chalk = require('chalk');
 
   // var url = "http://clas.asu.edu";
   var url = req.body.page;
@@ -42,8 +42,8 @@ var buttoncheck = function(req, res, next) {
       });
 
       //var pf = parsedResults;
-      console.log('1asdf');
-      console.log(parsedResults);
+      //console.log('1asdf');
+      //console.log(parsedResults);
 
       req.pf = parsedResults;
       next();

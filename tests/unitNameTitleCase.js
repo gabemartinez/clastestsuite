@@ -1,25 +1,69 @@
-var request = require('request')
-var cheerio = require('cheerio')
-var Case = require('case')
-const chalk = require('chalk')
+var unitnamecheck = function(req, res, next) {
+  // Do something.
+  //console.log('unitnamecheck mofo!');
 
-var url = process.argv[2];
+  var request = require('request');
+  var cheerio = require('cheerio');
+  var Case = require('case');
+  var chalk = require('chalk');
 
-//testing url argument title casing
-request(url, function (error, response, html) {
-  if (!error && response.statusCode == 200) {
-    var $ = cheerio.load(html)
-    var unitTitle = $( "div.header__sitename > span" ).text();
-    var thisCase = Case.of(unitTitle);
-    //console.log(thisCase);
-    if (thisCase == "title"){
-      //var pf = "PASS";
-      process.stdout.write("Unit Name Text: " + unitTitle.trim() + " / PASS-FAIL: " + chalk.bold.green("PASS \n"));
-    } else {
-      //var pf = "FAIL";
-      process.stdout.write("Unit Name Text: " + unitTitle.trim() + " / PASS-FAIL: " + chalk.bold.red("FAIL \n"));
-    }
-    //console.log(pf);
-    //process.stdout.write(chalk.blue("Unit Name Text: " + unitTitle.trim() + " / Casing Style: " + thisCase + " / PASS-FAIL: " + pf + "\n"));
-  }
-})
+  // var url = "http://clas.asu.edu";
+  var url = req.body.page;
+
+  var parsedResults = [];
+
+  //testing url argument site unit name casing
+  request(url, function (error, response, html) {
+
+    if (!error && response.statusCode == 200) {
+
+      var $ = cheerio.load(html);
+
+      $('div.header__sitename > span').each(function(i, element){
+
+        var text = $(this).text().trim();
+        var casing = Case.of($(this).text().trim());
+
+        if ( (casing == "title") || (casing == "capital") ){
+          var passfail = "PASS";
+        } else {
+          var passfail = "FAIL";
+        }
+        //var passfail = $(this).text().trim();
+
+        var testResults = {
+          text: text,
+          casing: casing,
+          passfail: passfail
+        };
+
+        parsedResults.push(testResults);
+
+      });
+
+      //var pf = parsedResults;
+      //console.log('1asdf');
+      //console.log(parsedResults);
+
+      req.pf = parsedResults;
+      next();
+
+    };
+
+    //console.log('2asdf');
+    //console.log(parsedResults);
+
+    // req.pf = parsedResults;
+    // next();
+
+  });
+
+  //console.log('3asdf');
+  //console.log(parsedResults);
+
+  // req.pf = parsedResults;
+  // next();
+
+};
+
+module.exports = unitnamecheck;
