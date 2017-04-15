@@ -23,7 +23,13 @@ var buttoncheck = function(req, res, next) {
 
         var text = $(this).text().trim();
         var casing = Case.of($(this).text().trim());
-        var passfail = $(this).text().trim();
+
+        if ( (casing == "sentence") || (casing == "header") ){
+          var passfail = "PASS";
+        } else {
+          var passfail = "FAIL";
+        }
+        //var passfail = $(this).text().trim();
 
         var testResults = {
           text: text,

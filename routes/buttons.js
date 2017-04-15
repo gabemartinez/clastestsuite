@@ -21,14 +21,14 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 /* GET buttons page. */
 router.get('/', function(req, res, next) {
-  res.render('buttons', { title: 'Buttons' });
+  res.render('../views/pages/buttons', { title: 'Buttons Test' });
 });
 
 // POST /buttons gets urlencoded bodies
 router.post('/', urlencodedParser, buttoncheck, function (req, res, next) {
   var page = req.body.page;
   var pf = req.pf;
-  res.render('buttons-success', { page: page, pf: pf });
+  res.render('../views/pages/buttons-success', { title: 'Buttons Check', page: page, pf: pf });
 });
 
 module.exports = router;
