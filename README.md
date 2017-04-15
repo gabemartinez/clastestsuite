@@ -1,6 +1,6 @@
 # Project Name
 
-CLAS Test Suite: The CLAS Test Suite are tools for automating tests across ASU CLAS sites.
+CLAS Test Suite: The CLAS Test Suite are tools for automating visual regression tests across ASU Webspark CLAS sites.
 
 ## Installation
 
@@ -24,7 +24,7 @@ TODO: Write history
 
 ## Credits
 
-TODO: Write credits
+Gabriel Martinez
 
 ## License
 

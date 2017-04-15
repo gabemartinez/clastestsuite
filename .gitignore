@@ -64,5 +64,7 @@ typings/
 *.png
 *.jpg
 
+backstop_data/
+
 
 # End of https://www.gitignore.io/api/node
