@@ -61,10 +61,9 @@ typings/
 # dotenv environment variables file
 .env
 
-*.png
-*.jpg
-
-backstop_data/
+backstop_data/bitmaps_reference
+backstop_data/bitmaps_test
+tests/downloadedImages
 
 
 # End of https://www.gitignore.io/api/node
