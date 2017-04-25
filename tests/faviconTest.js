@@ -6,10 +6,19 @@
   var download = require('download-file');
   var request = require('request');
   var cheerio = require('cheerio');
-  var sleep = require('sleep');
 
   var url = "https://math.asu.edu";
   //var url = req.body.page;
+
+  var options1 = {
+      directory: "./tests/downloadedImages/",
+      filename: "favicon.ico"
+  };
+
+  var options2 = {
+      directory: "./tests/downloadedImages/",
+      filename: "apple-touch-icon.png"
+  };
 
   //var parsedResults = [];
 
@@ -23,29 +32,6 @@
       var favIcon = $('link[rel="shortcut icon"]').attr('href');
 
       var appleTouchIcon = url+$('link[rel="apple-touch-icon"]').attr('href');
-
-      //console.log(favIcon);
-      //console.log(url+appleTouchIcon);
-
-      var options1 = {
-          directory: "./tests/downloadedImages/",
-          filename: "favicon.ico"
-      };
-
-      download(favIcon, options1, function(err){
-          if (err) throw err
-          console.log("favIcon downloaded")
-      });
-
-      var options2 = {
-          directory: "./tests/downloadedImages/",
-          filename: "apple-touch-icon.png"
-      };
-
-      download(appleTouchIcon, options2, function(err){
-          if (err) throw err
-          console.log("appleTouchIcon downloaded")
-      });
 
       // ./tests/downloadedImages/favicon.ico
       // ./tests/baselineImages/favicon.ico
@@ -76,32 +62,38 @@
 
     };
 
-    sleep.sleep(5); // sleep
+    download(favIcon, options1, function(err){
+        if (err) throw err
+        console.log("favIcon downloaded")
+        imageDiff.getFullResult({
 
-    imageDiff({
+          actualImage: './tests/downloadedImages/favicon.ico',
+          expectedImage: './tests/baselineImages/favicon.ico',
+          diffImage: './tests/resultImages/favicon-difference.ico',
+          shadow: true
 
-      // actualImage: './tests/downloadedImages/favicon.ico',
-      // expectedImage: './tests/baselineImages/favicon.ico',
-      // diffImage: './tests/resultImages/favicon-difference.ico',
+        }, function (err, imagesAreSame) {
+          console.log(imagesAreSame);
+        });
+    });
 
-      actualImage: './tests/downloadedImages/apple-touch-icon.png',
-      expectedImage: './tests/baselineImages/apple-touch-icon.png',
-      diffImage: './tests/resultImages/apple-touch-icon-difference.png',
+    download(appleTouchIcon, options2, function(err){
+        if (err) throw err
+        console.log("appleTouchIcon downloaded")
+        imageDiff.getFullResult({
 
-    }, function (err, imagesAreSame) {
-      // error will be any errors that occurred
-      // imagesAreSame is a boolean whether the images were the same or not
-      // diffImage will have an image which highlights differences
-      console.log(imagesAreSame);
+          actualImage: './tests/downloadedImages/apple-touch-icon.png',
+          expectedImage: './tests/baselineImages/apple-touch-icon.png',
+          diffImage: './tests/resultImages/apple-touch-icon-difference.png',
+          shadow: true
+
+        }, function (err, imagesAreSame) {
+          console.log(imagesAreSame);
+        });
     });
 
   });
 
-
-
-
-
-
 // };
 //
-// module.exports = unitnamecheck;
+// module.exports = favicontest;
