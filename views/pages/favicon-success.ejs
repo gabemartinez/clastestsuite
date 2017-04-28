@@ -1,0 +1,41 @@
+<% include ../partials/head %>
+
+    <div class="container">
+
+      <h1><%= title %> Results</h1>
+
+      <h3>You are testing page: <%= page %></h3>
+
+      <h2>favicon.ico Test</h2>
+      <div class="row">
+        <div class="col-md-3">Baseline Image</div>
+        <div class="col-md-3">Your Image</div>
+        <div class="col-md-3">Difference</div>
+        <div class="col-md-3">Pass/Fail</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"><img src="../tests/baselineImages/tests/favicon.ico" alt=""></div>
+        <div class="col-md-3">X</div>
+        <div class="col-md-3">X</div>
+        <div class="col-md-3">X</div>
+      </div>
+
+      <h2>apple-touch-icon.png Test</h2>
+      <div class="row">
+        <div class="col-md-3">Baseline Image</div>
+        <div class="col-md-3">Your Image</div>
+        <div class="col-md-3">Difference</div>
+        <div class="col-md-3">Pass/Fail</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"><img src="../tests/baselineImages/tests/apple-touch-icon-test.png" alt=""></div>
+        <div class="col-md-3">X</div>
+        <div class="col-md-3">X</div>
+        <div class="col-md-3">X</div>
+      </div>
+
+    </div>
+
+<% include ../partials/footer %>
