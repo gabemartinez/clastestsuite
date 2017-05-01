@@ -1,5 +1,12 @@
 <% include ../partials/head %>
 
+<script type="text/javascript">
+$(document).ready(function(){
+    $('.container').delay(30000).fadeIn(200);
+
+});
+</script>
+
     <div class="container">
 
       <h1><%= title %> Results</h1>
@@ -15,9 +22,9 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3"><img src="../tests/baselineImages/tests/favicon.ico" alt=""></div>
-        <div class="col-md-3">X</div>
-        <div class="col-md-3">X</div>
+        <div class="col-md-3"><img src="/baselineImages/favicon.ico" alt="baseline favicon"></div>
+        <div class="col-md-3"><img src="/downloadedImages/favicon.ico" alt="your favicon"></div>
+        <div class="col-md-3"><img src="/resultImages/favicon-difference.ico" alt="result favicon"></div>
         <div class="col-md-3">X</div>
       </div>
 
@@ -30,9 +37,9 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3"><img src="../tests/baselineImages/tests/apple-touch-icon-test.png" alt=""></div>
-        <div class="col-md-3">X</div>
-        <div class="col-md-3">X</div>
+        <div class="col-md-3"><img src="/baselineImages/apple-touch-icon.png" alt="baseline apple touch icon"></div>
+        <div class="col-md-3"><img src="/downloadedImages/apple-touch-icon.png" alt="your apple touch icon"></div>
+        <div class="col-md-3"><img src="/resultImages/apple-touch-icon-difference.png" alt="result apple touch icon"></div>
         <div class="col-md-3">X</div>
       </div>
 

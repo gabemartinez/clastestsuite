@@ -36,7 +36,6 @@
     "morgan": "~1.7.0",
     "phantomcss": "^1.1.5",
     "request": "^2.81.0",
-    "serve-favicon": "~2.3.0",
-    "sleep": "^5.1.1"
+    "serve-favicon": "~2.3.0"
   }
 }
