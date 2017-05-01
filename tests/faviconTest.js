@@ -1,6 +1,6 @@
 var faviconcheck = function(req, res, next) {
   // Do something.
-  console.log('faviconcheck mofo!');
+  //console.log('faviconcheck mofo!');
 
   var imageDiff = require('image-diff');
   var download = require('download-file');
@@ -20,8 +20,6 @@ var faviconcheck = function(req, res, next) {
       filename: "apple-touch-icon.png"
   };
 
-  //var parsedResults = [];
-
   //testing url argument site favicons
   request(url, function (error, response, html) {
 
@@ -35,7 +33,7 @@ var faviconcheck = function(req, res, next) {
 
       download(favIcon, options1, function(err){
           if (err) throw err
-          console.log("favIcon downloaded")
+          //console.log("favIcon downloaded")
           imageDiff.getFullResult({
 
             actualImage: './tests/downloadedImages/favicon.ico',
@@ -44,13 +42,19 @@ var faviconcheck = function(req, res, next) {
             shadow: true
 
           }, function (err, imagesAreSame) {
-            console.log(imagesAreSame);
+
+            var favicondp = imagesAreSame.percentage;
+            //console.log(favicondp);
+            req.favicondp = favicondp;
+            next();
+
           });
+
       });
 
       download(appleTouchIcon, options2, function(err){
           if (err) throw err
-          console.log("appleTouchIcon downloaded")
+          //console.log("appleTouchIcon downloaded")
           imageDiff.getFullResult({
 
             actualImage: './tests/downloadedImages/apple-touch-icon.png',
@@ -59,33 +63,13 @@ var faviconcheck = function(req, res, next) {
             shadow: true
 
           }, function (err, imagesAreSame) {
-            console.log(imagesAreSame);
+
+            var appleicondp = imagesAreSame.percentage;
+            //console.log(appleicondp);
+            req.appleicondp = appleicondp;
+
           });
       });
-
-      // $('div.header__sitename > span').each(function(i, element){
-      //
-      //   var text = $(this).text().trim();
-      //   var casing = Case.of($(this).text().trim());
-      //
-      //   if ( (casing == "title") || (casing == "capital") ){
-      //     var passfail = "PASS";
-      //   } else {
-      //     var passfail = "FAIL";
-      //   }
-      //
-      //   var testResults = {
-      //     text: text,
-      //     casing: casing,
-      //     passfail: passfail
-      //   };
-      //
-      //   parsedResults.push(testResults);
-      //
-      // });
-
-      req.pf = "parsedResults";
-      next();
 
     };
 
