@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var buttons = require('./routes/buttons');
 var unitname = require('./routes/unitname');
+var faviconroute = require('./routes/favicon');
 
 var app = express();
 
@@ -23,10 +24,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use("/baselineImages", express.static(__dirname + '/tests/baselineImages'));
+app.use("/downloadedImages", express.static(__dirname + '/tests/downloadedImages'));
+app.use("/resultImages", express.static(__dirname + '/tests/resultImages'));
 
 app.use('/', index);
 app.use('/buttons', buttons);
 app.use('/unitname', unitname);
+app.use('/favicon', faviconroute);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

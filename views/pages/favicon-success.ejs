@@ -1,0 +1,53 @@
+<% include ../partials/head %>
+
+    <div class="container">
+
+      <h1><%= title %> Results</h1>
+
+      <h3>You are testing page: <%= page %></h3>
+
+      <h2>favicon.ico Test</h2>
+      <div class="row">
+        <div class="col-md-3">Baseline Image</div>
+        <div class="col-md-3">Your Image</div>
+        <div class="col-md-3">Difference</div>
+        <div class="col-md-3">Pass/Fail</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"><img src="/baselineImages/favicon.ico" alt="baseline favicon"></div>
+        <div class="col-md-3"><img src="/downloadedImages/favicon.ico" alt="your favicon"></div>
+        <div class="col-md-3"><img src="/resultImages/favicon-difference.ico" alt="result favicon"></div>
+        <div class="col-md-3">
+          <% if(favicondp > 0){ %>
+            <strong>FAIL</strong>
+          <% } else { %>
+            PASS
+          <% } %>
+        </div>
+      </div>
+
+      <h2>apple-touch-icon.png Test</h2>
+      <div class="row">
+        <div class="col-md-3">Baseline Image</div>
+        <div class="col-md-3">Your Image</div>
+        <div class="col-md-3">Difference</div>
+        <div class="col-md-3">Pass/Fail</div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3"><img src="/baselineImages/apple-touch-icon.png" alt="baseline apple touch icon"></div>
+        <div class="col-md-3"><img src="/downloadedImages/apple-touch-icon.png" alt="your apple touch icon"></div>
+        <div class="col-md-3"><img src="/resultImages/apple-touch-icon-difference.png" alt="result apple touch icon"></div>
+        <div class="col-md-3">
+          <% if(appleicondp > 0){ %>
+            <strong>FAIL</strong>
+          <% } else { %>
+            PASS
+          <% } %>
+        </div>
+      </div>
+
+    </div>
+
+<% include ../partials/footer %>
