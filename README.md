@@ -1,6 +1,6 @@
 # Project Name
 
-CLAS Test Suite: The CLAS Test Suite are tools for automating visual regression tests and web standards checklist across ASU Webspark CLAS sites.
+CLAS Test Suite: The CLAS Test Suite are tools for automating visual regression tests and web standards checklist verification across ASU Webspark CLAS sites.
 
 ## Installation
 
@@ -28,7 +28,7 @@ This is an Express.js app and once you start the server you can navigate to http
 
 ## History
 
-TODO: Write history
+The CLAS Test Suite was developed to automate regression testing after Webspark updates, and to automate verification of web standards checklist.
 
 ## Credits
 
