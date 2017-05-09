@@ -7,7 +7,7 @@
       <form method="post" action="/buttons">
         <div class="form-group">
           <label for="page">Page being tested:</label>
-          <input type="text" class="form-control" id="page" name="page" placeholder="ex. https://clas.asu.edu">
+          <% include ../partials/site-dropdown %>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
