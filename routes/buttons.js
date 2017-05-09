@@ -3,7 +3,7 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 
-var buttoncheck = require('../tests/buttonsTextSentenceCasing');
+var buttons = require('../tests/buttons');
 
 // create application/json parser
 var jsonParser = bodyParser.json();
@@ -25,10 +25,10 @@ router.get('/', function(req, res, next) {
 });
 
 // POST /buttons gets urlencoded bodies
-router.post('/', urlencodedParser, buttoncheck, function (req, res, next) {
+router.post('/', urlencodedParser, buttons, function (req, res, next) {
   var page = req.body.page;
   var pf = req.pf;
-  res.render('../views/pages/buttons-success', { title: 'Buttons Check', page: page, pf: pf });
+  res.render('../views/pages/buttons-success', { title: 'Buttons Test', page: page, pf: pf });
 });
 
 module.exports = router;

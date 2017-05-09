@@ -11,6 +11,7 @@ var buttons = require('./routes/buttons');
 var unitname = require('./routes/unitname');
 var faviconroute = require('./routes/favicon');
 var sitemap = require('./routes/sitemap');
+var globalasulinks = require('./routes/globalasulinks');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use('/buttons', buttons);
 app.use('/unitname', unitname);
 app.use('/favicon', faviconroute);
 app.use('/sitemap', sitemap);
+app.use('/globalasulinks', globalasulinks);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

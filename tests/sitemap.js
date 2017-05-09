@@ -1,6 +1,4 @@
 var sitemapgen = function(req, res, next) {
-  // Do something.
-  //console.log('sitemap gen mofo!');
 
   var request = require('request');
   var cheerio = require('cheerio');

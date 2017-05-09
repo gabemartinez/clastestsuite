@@ -1,6 +1,4 @@
-var buttoncheck = function(req, res, next) {
-  // Do something.
-  //console.log('buttoncheck mofo!');
+var unitname = function(req, res, next) {
 
   var request = require('request');
   var cheerio = require('cheerio');
@@ -12,19 +10,19 @@ var buttoncheck = function(req, res, next) {
 
   var parsedResults = [];
 
-  //testing url argument site buttons casing
+  //testing url argument site unit name casing
   request(url, function (error, response, html) {
 
     if (!error && response.statusCode == 200) {
 
       var $ = cheerio.load(html);
 
-      $('.btn').each(function(i, element){
+      $('div.header__sitename > span').each(function(i, element){
 
         var text = $(this).text().trim();
         var casing = Case.of($(this).text().trim());
 
-        if ( (casing == "sentence") || (casing == "header") ){
+        if ( (casing == "title") || (casing == "capital") ){
           var passfail = "PASS";
         } else {
           var passfail = "FAIL";
@@ -41,29 +39,13 @@ var buttoncheck = function(req, res, next) {
 
       });
 
-      //var pf = parsedResults;
-      //console.log('1asdf');
-      //console.log(parsedResults);
-
       req.pf = parsedResults;
       next();
 
     };
 
-    //console.log('2asdf');
-    //console.log(parsedResults);
-
-    // req.pf = parsedResults;
-    // next();
-
   });
-
-  //console.log('3asdf');
-  //console.log(parsedResults);
-
-  // req.pf = parsedResults;
-  // next();
 
 };
 
-module.exports = buttoncheck;
+module.exports = unitname;

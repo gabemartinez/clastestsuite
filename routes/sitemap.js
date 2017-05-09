@@ -11,16 +11,16 @@ var jsonParser = bodyParser.json();
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-/* GET buttons page. */
+/* GET sitemap page. */
 router.get('/', function(req, res, next) {
   res.render('../views/pages/sitemap', { title: 'Sitemap Test' });
 });
 
-// POST /buttons gets urlencoded bodies
+// POST /sitemap gets urlencoded bodies
 router.post('/', urlencodedParser, sitemap, function (req, res, next) {
   var page = req.body.page;
   var results = req.results;
-  res.render('../views/pages/sitemap-success', { title: 'Sitemap Check', page: page, results: results });
+  res.render('../views/pages/sitemap-success', { title: 'Sitemap Test', page: page, results: results });
 });
 
 module.exports = router;
