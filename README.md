@@ -1,14 +1,22 @@
 # Project Name
 
-CLAS Test Suite: The CLAS Test Suite are tools for automating visual regression tests across ASU Webspark CLAS sites.
+CLAS Test Suite: The CLAS Test Suite are tools for automating visual regression tests and web standards checklist across ASU Webspark CLAS sites.
 
 ## Installation
 
-TODO: Describe the installation process
+Clone repo and cd into folder.
+
+Install nodemon globally.
+
+Install npm dependencies:
+$npm install
+
+Then start app:
+$npm start
 
 ## Usage
 
-TODO: Write usage instructions
+This is an Express.js app and once you start the server you can navigate to http://localhost:3000 to use.
 
 ## Contributing
 
@@ -16,7 +24,7 @@ TODO: Write usage instructions
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+5. Submit a pull request and we'll go from there.
 
 ## History
 
@@ -24,8 +32,8 @@ TODO: Write history
 
 ## Credits
 
-Gabriel Martinez
+Gabriel Martinez and the College of Liberal Arts.
 
 ## License
 
-TODO: Write license
+This project is licensed under the terms of the MIT license.
