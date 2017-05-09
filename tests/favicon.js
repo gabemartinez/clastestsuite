@@ -1,6 +1,4 @@
-var faviconcheck = function(req, res, next) {
-  // Do something.
-  //console.log('faviconcheck mofo!');
+var favicon = function(req, res, next) {
 
   var imageDiff = require('image-diff');
   var download = require('download-file');
@@ -77,4 +75,4 @@ var faviconcheck = function(req, res, next) {
 
 };
 
-module.exports = faviconcheck;
+module.exports = favicon;

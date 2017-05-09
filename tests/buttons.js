@@ -1,6 +1,4 @@
-var unitnamecheck = function(req, res, next) {
-  // Do something.
-  //console.log('unitnamecheck mofo!');
+var buttons = function(req, res, next) {
 
   var request = require('request');
   var cheerio = require('cheerio');
@@ -12,24 +10,23 @@ var unitnamecheck = function(req, res, next) {
 
   var parsedResults = [];
 
-  //testing url argument site unit name casing
+  //testing url argument site buttons casing
   request(url, function (error, response, html) {
 
     if (!error && response.statusCode == 200) {
 
       var $ = cheerio.load(html);
 
-      $('div.header__sitename > span').each(function(i, element){
+      $('.btn').each(function(i, element){
 
         var text = $(this).text().trim();
         var casing = Case.of($(this).text().trim());
 
-        if ( (casing == "title") || (casing == "capital") ){
+        if ( (casing == "sentence") || (casing == "header") ){
           var passfail = "PASS";
         } else {
           var passfail = "FAIL";
         }
-        //var passfail = $(this).text().trim();
 
         var testResults = {
           text: text,
@@ -41,29 +38,13 @@ var unitnamecheck = function(req, res, next) {
 
       });
 
-      //var pf = parsedResults;
-      //console.log('1asdf');
-      //console.log(parsedResults);
-
       req.pf = parsedResults;
       next();
 
     };
 
-    //console.log('2asdf');
-    //console.log(parsedResults);
-
-    // req.pf = parsedResults;
-    // next();
-
   });
-
-  //console.log('3asdf');
-  //console.log(parsedResults);
-
-  // req.pf = parsedResults;
-  // next();
 
 };
 
-module.exports = unitnamecheck;
+module.exports = buttons;

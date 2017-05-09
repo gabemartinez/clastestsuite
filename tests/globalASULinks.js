@@ -1,11 +1,10 @@
-// var globalasulinks = function(req, res, next) {
+var globalasulinks = function(req, res, next) {
   // Do something.
-  //console.log('globalasulinks mofo!');
 
   var request = require('request');
   var cheerio = require('cheerio');
-  var url = "http://clas.asu.edu";
-  //var url = req.body.page;
+  // var url = "http://clas.asu.edu";
+  var url = req.body.page;
 
   var results = [];
 
@@ -87,18 +86,20 @@
 
       // console.log(baselineLinksObject);
       // console.log(resultsObject);
+      //
+      // console.log(baselineLinksObject === resultsObject);
 
-      console.log(baselineLinksObject === resultsObject);
+      var passfail = baselineLinksObject === resultsObject ? 'Pass' : 'Fail';
 
+      // console.log(passfail);
 
-
-      // req.passfail = results;
-      // next();
+      req.passfail = passfail;
+      next();
 
     };
 
   });
 
-// };
+};
 
-// module.exports = globalasulinks;
+module.exports = globalasulinks;
