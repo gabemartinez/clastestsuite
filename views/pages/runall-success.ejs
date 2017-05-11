@@ -17,8 +17,6 @@
             <thead>
               <tr>
                 <th>Page</th>
-                <th>Global ASU Links</th>
-                <th>Buttons</th>
                 <th>Unit Name</th>
               </tr>
             </thead>
@@ -27,40 +25,6 @@
                  <tr>
                    <td><%= results[i].link %></td>
                    <td>||</td>
-                   <td>|||</td>
-                   <td>||||</td>
-                 </tr>
-              <% } %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Global ASU Links Test Results</h4>
-          <h4>Pass/Fail: <%= passfail %></h4>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Buttons Test Results</h4>
-          <table class="table table-hover">
-            <caption>Buttons on page: <%= pf.length %></caption>
-            <thead>
-              <tr>
-                <th>Button Text</th>
-                <th>Casing Type</th>
-                <th>Pass/Fail</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for(var i=0; i < pf.length; i++) { %>
-                 <tr>
-                   <td><%= pf[i].text %></td>
-                   <td><%= pf[i].casing %></td>
-                   <td><%= pf[i].passfail %></td>
                  </tr>
               <% } %>
             </tbody>
