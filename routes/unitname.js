@@ -19,8 +19,8 @@ router.get('/', function(req, res, next) {
 // POST gets /unitname urlencoded bodies
 router.post('/', urlencodedParser, unitname, function (req, res, next) {
   var page = req.body.page;
-  var pf = req.pf;
-  res.render('../views/pages/unitname-success', { title: 'Unit Name Test', page: page, pf: pf });
+  var un = req.un;
+  res.render('../views/pages/unitname-success', { title: 'Unit Name Test', page: page, un: un });
 });
 
 module.exports = router;
