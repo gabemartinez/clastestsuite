@@ -38,13 +38,13 @@ router.get('/', function(req, res, next) {
 router.post('/', urlencodedParser, sitemaprunall, unitnamerunall, function (req, res, next) {
   var page = req.body.page;
   var results = req.results;
-  var pf = req.pf;
-  var passfail = req.passfail;
+  // var pf = req.pf;
+  // var passfail = req.passfail;
   var un = req.un;
   // var favicondp = req.favicondp;
   // var appleicondp = req.appleicondp;
   // res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, pf: pf, passfail: passfail, un: un, favicondp: favicondp, appleicondp: appleicondp });
-  res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, pf: pf, passfail: passfail, un: un });
+  res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
 });
 
 module.exports = router;

@@ -37,7 +37,7 @@ var sitemaprunall = function(req, res, next) {
 
     };
 
-    console.log(results);
+    // console.log(results);
 
   });
 
