@@ -1,49 +1,55 @@
 var unitnamerunall = function(req, res, next) {
 
+  var sitemapLinks = req.sitemapLinks;
+
   var request = require('request');
   var cheerio = require('cheerio');
   var Case = require('case');
 
-  // var url = "http://clas.asu.edu";
-  var url = req.body.page;
+  // console.log('here we go');
+  // console.log(sitemapLinks.length);
 
-  var parsedResults = [];
+  var emptyResults = [];
 
-  //testing url argument site unit name casing
-  request(url, function (error, response, html) {
+  for (i = 0; i < sitemapLinks.length; i++) {
+      // console.log(sitemapLinks[i].link);
 
-    if (!error && response.statusCode == 200) {
+      //testing url argument site unit name casing
+      request(sitemapLinks[i].link, function (error, response, html) {
 
-      var $ = cheerio.load(html);
+        if (!error && response.statusCode == 200) {
 
-      $('div.header__sitename > span').each(function(i, element){
+          var $ = cheerio.load(html);
 
-        var text = $(this).text().trim();
-        var casing = Case.of($(this).text().trim());
+          var unitNameText = $('div.header__sitename > span').text().trim();
 
-        if ( (casing == "title") || (casing == "capital") ){
-          var passfail = "PASS";
-        } else {
-          var passfail = "FAIL";
-        }
-        //var passfail = $(this).text().trim();
+          var unitNameCasing = Case.of(unitNameText);
 
-        var testResults = {
-          text: text,
-          casing: casing,
-          passfail: passfail
+          if ( (unitNameCasing == "title") || (unitNameCasing == "capital") ){
+            var unitNamePassFail = "PASS";
+          } else {
+            var unitNamePassFail = "FAIL";
+          }
+
+          // console.log(passfail);
+
+          var unitnameResult = {
+            unitNameText: unitNameText,
+            unitNameCasing: unitNameCasing,
+            unitNamePassFail: unitNamePassFail
+          };
+
+          emptyResults.push(unitnameResult);
         };
 
-        parsedResults.push(testResults);
+        req.unitnameResults = emptyResults;
 
       });
 
-      req.un = parsedResults;
-      next();
+      console.log(req.unitnameResults);
+      // next();
 
-    };
-
-  });
+  }
 
 };
 

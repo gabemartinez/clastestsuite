@@ -36,15 +36,10 @@ router.get('/', function(req, res, next) {
 
 // POST /runall gets urlencoded bodies
 router.post('/', urlencodedParser, sitemaprunall, unitnamerunall, function (req, res, next) {
-  var page = req.body.page;
-  var results = req.results;
-  // var pf = req.pf;
-  // var passfail = req.passfail;
-  var un = req.un;
-  // var favicondp = req.favicondp;
-  // var appleicondp = req.appleicondp;
-  // res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, pf: pf, passfail: passfail, un: un, favicondp: favicondp, appleicondp: appleicondp });
-  res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
+  var sitemapLinks = req.sitemapLinks;
+
+  //res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
+  res.json({ title: 'Run All Test', sitemapLinks: sitemapLinks });
 });
 
 module.exports = router;

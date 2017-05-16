@@ -6,7 +6,7 @@ var sitemaprunall = function(req, res, next) {
   // var url = "https://clas.asu.edu";
   var url = req.body.page;
 
-  var results = [];
+  var sitemapLinks = [];
 
   //testing url argument and building sitemap
   request(url, function (error, response, html) {
@@ -20,19 +20,16 @@ var sitemaprunall = function(req, res, next) {
         var link = $(this).attr('href').trim();
 
         var links = {
-          link: link
+          link: url+link
         };
 
-        // if (link.startsWith(url)) {
-        //   results.push(links);
-        // }
-        results.push(links);
+        sitemapLinks.push(links);
 
       });
 
       //console.log(results);
 
-      req.results = results;
+      req.sitemapLinks = sitemapLinks;
       next();
 
     };
