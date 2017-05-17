@@ -19,11 +19,19 @@ var sitemaprunall = function(req, res, next) {
 
         var link = $(this).attr('href').trim();
 
-        var links = {
-          link: url+link
-        };
+        if (link.substring(0, 1) == "/") {
+          var links = {
+            link: url+link
+          };
+        } else {
+          var links = {
+            link: link
+          };
+        }
 
-        sitemapLinks.push(links);
+        if (links.link.startsWith(url)) {
+          sitemapLinks.push(links);
+        }
 
       });
 

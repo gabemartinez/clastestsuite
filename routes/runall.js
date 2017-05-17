@@ -37,9 +37,10 @@ router.get('/', function(req, res, next) {
 // POST /runall gets urlencoded bodies
 router.post('/', urlencodedParser, sitemaprunall, unitnamerunall, function (req, res, next) {
   var sitemapLinks = req.sitemapLinks;
+  var unitNameResults = req.unitNameResults;
 
   //res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
-  res.json({ title: 'Run All Test', sitemapLinks: sitemapLinks });
+  res.json({ title: 'Run All Test', sitemapLinks: sitemapLinks, unitNameResults: unitNameResults });
 });
 
 module.exports = router;
