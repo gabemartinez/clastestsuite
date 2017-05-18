@@ -20,29 +20,21 @@ var sitemaprunall = function(req, res, next) {
         var link = $(this).attr('href').trim();
 
         if (link.substring(0, 1) == "/") {
-          var links = {
-            link: url+link
-          };
+          link = url+link;
         } else {
-          var links = {
-            link: link
-          };
+          link = link;
         }
 
-        if (links.link.startsWith(url)) {
-          sitemapLinks.push(links);
+        if (link.startsWith(url)) {
+          sitemapLinks.push(link);
         }
 
       });
-
-      //console.log(results);
 
       req.sitemapLinks = sitemapLinks;
       next();
 
     };
-
-    // console.log(results);
 
   });
 

@@ -1,9 +1,11 @@
-var unitnamerunall = function(req, res, next) {
+var buttonsnamerunall = function(req, res, next) {
 
   var sitemapLinks = req.sitemapLinks;
   var cheerio = require('cheerio');
   var Case = require('case');
   var request = require('request-promise')
+
+  var parsedResults = [];  
 
   function parseSites(urls, callback) {
       var parsedSites = [];
@@ -23,21 +25,35 @@ var unitnamerunall = function(req, res, next) {
   function parse(body) {
       var $ = cheerio.load(body);
       // return $('#header > div > div > div > div.header__sitename > span').text()
-      var unitNameCasing = Case.of($('div.header__sitename > span').text().trim());
-      if ( (unitNameCasing == "title") || (unitNameCasing == "capital") ){
-        return "PASS";
-      } else {
-        return "FAIL";
-      }
+      $('.btn').each(function(i, element){
+
+        var text = $(this).text().trim();
+        var casing = Case.of($(this).text().trim());
+
+        if ( (casing == "sentence") || (casing == "header") ){
+          var passfail = "PASS";
+        } else {
+          var passfail = "FAIL";
+        }
+
+        var testResults = {
+          text: text,
+          casing: casing,
+          passfail: passfail
+        };
+
+        parsedResults.push(testResults);
+
+      });
 
   }
 
   parseSites(sitemapLinks,function(data) {
       // console.log(data)
-      req.unitNamesResults = data;
+      req.buttonsNamesResults = data;
       next();
   })
 
 };
 
-module.exports = unitnamerunall;
+module.exports = buttonsnamerunall;

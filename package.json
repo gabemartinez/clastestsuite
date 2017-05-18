@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
   "dependencies": {
+    "async": "^2.4.0",
     "backstopjs": "^2.6.11",
     "body-parser": "^1.17.1",
     "case": "^1.5.2",
@@ -35,6 +36,7 @@
     "morgan": "~1.7.0",
     "phantomcss": "^1.1.5",
     "request": "^2.81.0",
+    "request-promise": "^4.2.1",
     "rmdir": "^1.2.0",
     "serve-favicon": "~2.3.0",
     "sitemap-generator": "^6.0.0"

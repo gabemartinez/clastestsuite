@@ -8,9 +8,9 @@ var bodyParser = require('body-parser');
 
 // my middleware
 var sitemaprunall = require('../tests/sitemap-runall');
-// var buttons = require('../tests/buttons');
+// var buttonsnamerunall = require('../tests/buttons-runall');
 // var globalasulinks = require('../tests/globalasulinks');
-var unitnamerunall = require('../tests/unitname-runall');
+// var unitnamerunall = require('../tests/unitname-runall');
 // var favicon = require('../tests/favicon');
 
 // create application/json parser
@@ -35,12 +35,12 @@ router.get('/', function(req, res, next) {
 });
 
 // POST /runall gets urlencoded bodies
-router.post('/', urlencodedParser, sitemaprunall, unitnamerunall, function (req, res, next) {
+router.post('/', urlencodedParser, sitemaprunall, function (req, res, next) {
+  var url = req.body.page;
   var sitemapLinks = req.sitemapLinks;
-  var unitNameResults = req.unitNameResults;
 
   //res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
-  res.json({ title: 'Run All Test', sitemapLinks: sitemapLinks, unitNameResults: unitNameResults });
+  res.json({ title: 'Run All Test', url: url, sitemapLinks: sitemapLinks });
 });
 
 module.exports = router;
