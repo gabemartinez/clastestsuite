@@ -4,52 +4,27 @@
 
       <h1><%= title %> Results</h1>
 
-      <h4>You are testing site: <a href="<%= page %>" target="_blank"><%= page %></a></h4>
+      <h4>You are testing site: <a href="<%= data.mainSiteLink %>" target="_blank"><%= data.mainSiteLink %></a></h4>
       <hr />
 
       <h2>Results</h2>
 
       <div class="row">
         <div class="col-md-12">
-          <h4>Sitemap with page results</h4>
+          <h4>Sitemap pages</h4>
           <table class="table table-hover">
-            <caption>Total pages: <%= results.length %></caption>
+            <caption>Total pages: <%= data.siteLinks.length %></caption>
             <thead>
               <tr>
                 <th>Page</th>
-                <th>Unit Name</th>
+                <th>Overall Grade</th>
               </tr>
             </thead>
             <tbody>
-              <% for(var i=0; i < results.length; i++) { %>
+              <% for(var i=0; i < data.siteLinks.length; i++) { %>
                  <tr>
-                   <td><%= results[i].link %></td>
-                   <td>PF</td>
-                 </tr>
-              <% } %>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12">
-          <h4>Unit Name Test Results</h4>
-          <table class="table table-hover">
-            <caption>Unit Names on page: <%= un.length %></caption>
-            <thead>
-              <tr>
-                <th>Text</th>
-                <th>Casing Type</th>
-                <th>Pass/Fail</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for(var i=0; i < un.length; i++) { %>
-                 <tr>
-                   <td><%= un[i].text %></td>
-                   <td><%= un[i].casing %></td>
-                   <td><%= un[i].passfail %></td>
+                   <td><a href="runall/singlegrade/<%= i %>"><%= data.siteLinks[i].link %></a></td>
+                   <td><%= data.siteLinks[i].overallGrade %></td>
                  </tr>
               <% } %>
             </tbody>

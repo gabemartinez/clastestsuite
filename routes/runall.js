@@ -34,13 +34,22 @@ router.get('/', function(req, res, next) {
   res.render('../views/pages/runall', { title: 'Run All Test' });
 });
 
+router.get('/singlegrade/:linkid', function(req, res, next) {
+  // console.log(req.params);
+  // res.json(req.params);
+  var linkid = req.params.linkid;
+  res.render('../views/pages/singlegrade', { title: 'Run asfasdf', linkid: linkid });
+});
+
 // POST /runall gets urlencoded bodies
-router.post('/', urlencodedParser, sitemaprunall, function (req, res, next) {
+router.post('/', urlencodedParser, function (req, res, next) {
   var url = req.body.page;
-  var sitemapLinks = req.sitemapLinks;
+  // console.log(url);
+  var data = require('../somedata/'+url);
+  // var sitemapLinks = req.sitemapLinks;
 
   //res.render('../views/pages/runall-success', { title: 'Run All Test', page: page, results: results, un: un });
-  res.json({ title: 'Run All Test', url: url, sitemapLinks: sitemapLinks });
+  res.render('../views/pages/runall-success', { title: 'Run All Test', url: url, data });
 });
 
 module.exports = router;
