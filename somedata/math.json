@@ -3,7 +3,7 @@
     "siteLinks": [
 {
 "link": "https://math.asu.edu",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -13,7 +13,7 @@
 },
 {
 "link": "https://math.asu.edu/degrees",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -23,7 +23,7 @@
 },
 {
 "link": "https://math.asu.edu/degrees/undergrad",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -33,7 +33,7 @@
 },
 {
 "link": "https://math.asu.edu/degrees/minors-certs",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -43,7 +43,7 @@
 },
 {
 "link": "https://math.asu.edu/degrees/grad",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -53,7 +53,7 @@
 },
 {
 "link": "https://math.asu.edu/degrees/accelerated",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -63,7 +63,7 @@
 },
 {
 "link": "https://math.asu.edu/why",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -73,7 +73,7 @@
 },
 {
 "link": "https://math.asu.edu/admission",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -83,7 +83,7 @@
 },
 {
 "link": "https://math.asu.edu/admission/undergraduate",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -93,7 +93,7 @@
 },
 {
 "link": "https://math.asu.edu/admission/graduate",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -103,7 +103,7 @@
 },
 {
 "link": "https://math.asu.edu/admission/transfer",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -113,7 +113,7 @@
 },
 {
 "link": "https://math.asu.edu/admission/international",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -123,327 +123,7 @@
 },
 {
 "link": "https://math.asu.edu/campus-life",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/tuition",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/deans-circle-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/faire-elizabeth-virgin-sax-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/first-generation-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/research-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/school-department-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/scholarships/study-abroad-scholarships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships/maher",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships/LGBT",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships/excellence-awards",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships/dept-school",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/fellowships/swift",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/student-life",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/advising",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/advising/department-advisors",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/advising/transitional",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/student-success",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/student-success/tutoring",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/residential-college",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/residential-college/communities",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/residential-college/clas-academy",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/residential-college/res-team",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/get-involved",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/get-involved/clubs",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/get-involved/clubs/clas",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/get-involved/study-abroad",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/internships",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/transfer-experience",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/international-experience",
-"buttonsGrade": 100,
-"unitNameGrade": 100,
-"globalASULinksGrade": 100,
-"faviconGrade": 100,
-"logoGrade": 100,
-"footerGrade": 100,
-"overallGrade": 100
-},
-{
-"link": "https://math.asu.edu/first-year-experience",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -453,7 +133,7 @@
 },
 {
 "link": "https://math.asu.edu/first-year/orientation",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -463,7 +143,7 @@
 },
 {
 "link": "https://math.asu.edu/first-year/discovery",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -473,7 +153,7 @@
 },
 {
 "link": "https://math.asu.edu/research",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -483,7 +163,7 @@
 },
 {
 "link": "https://math.asu.edu/research/centers",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -493,7 +173,7 @@
 },
 {
 "link": "https://math.asu.edu/research/undergraduate",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -503,7 +183,7 @@
 },
 {
 "link": "https://math.asu.edu/research/graduate",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -513,7 +193,7 @@
 },
 {
 "link": "https://math.asu.edu/interdisciplinary-research",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -523,7 +203,7 @@
 },
 {
 "link": "https://math.asu.edu/research/numbers",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -533,7 +213,7 @@
 },
 {
 "link": "https://math.asu.edu/engage",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -543,7 +223,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/stay-engaged",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -553,7 +233,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/stay-engaged/leaders",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -563,7 +243,7 @@
 },
 {
 "link": "https://math.asu.edu/alumni",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -573,7 +253,7 @@
 },
 {
 "link": "https://math.asu.edu/signature-events",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -583,7 +263,7 @@
 },
 {
 "link": "https://math.asu.edu/wadesmithlecture",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -593,7 +273,7 @@
 },
 {
 "link": "https://math.asu.edu/hearts-and-scholars",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -603,7 +283,7 @@
 },
 {
 "link": "https://math.asu.edu/marshall-lecture",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -613,7 +293,7 @@
 },
 {
 "link": "https://math.asu.edu/Golden-Reunion",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -623,7 +303,7 @@
 },
 {
 "link": "https://math.asu.edu/deansciencelecture",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -633,7 +313,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/stay-engaged/deans-council",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -643,7 +323,7 @@
 },
 {
 "link": "https://math.asu.edu/content/2020-giving-page",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -653,7 +333,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/causes",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -663,7 +343,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/scholarships",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -673,7 +353,7 @@
 },
 {
 "link": "https://math.asu.edu/hearts-and-scholars",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -683,7 +363,7 @@
 },
 {
 "link": "https://math.asu.edu/giving-day",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -693,7 +373,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/connect",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -703,7 +383,7 @@
 },
 {
 "link": "https://math.asu.edu/engage/connect/contact-our-team",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -713,7 +393,7 @@
 },
 {
 "link": "https://math.asu.edu/resources",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -723,7 +403,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/student",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -733,7 +413,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/academic-grievance",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -743,7 +423,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/academic-integrity",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -753,7 +433,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/advising",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -763,7 +443,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/career",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -773,7 +453,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/clas-parents",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -783,7 +463,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/disqualification-probation",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -793,7 +473,7 @@
 },
 {
 "link": "https://math.asu.edu/internship-course",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -803,7 +483,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/student/graduation",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -813,7 +493,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/medical-withdrawal",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -823,7 +503,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/recognition-awards",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -833,7 +513,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/science-society",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -843,7 +523,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/transfer-courses",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -853,7 +533,7 @@
 },
 {
 "link": "https://math.asu.edu/student-success/tutoring",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -863,7 +543,7 @@
 },
 {
 "link": "https://math.asu.edu/Undergraduate-Readmission",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -873,7 +553,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/faculty-staff",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -883,7 +563,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/academic-integrity-resources",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -893,7 +573,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/faculty/curriculum-development/4-1",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -903,7 +583,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/academic-personnel",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -913,7 +593,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/advisor",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -923,7 +603,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/budget-financial-services",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -933,7 +613,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/business-office",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -943,7 +623,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/college-governence",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -953,7 +633,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/disruptive-behavior",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -963,7 +643,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/facilities",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -973,7 +653,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/first-year-forward",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -983,7 +663,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/marketing",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -993,7 +673,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/research-enterprise",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1003,7 +683,7 @@
 },
 {
 "link": "https://math.asu.edu/student-alert-process",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1013,7 +693,7 @@
 },
 {
 "link": "https://math.asu.edu/resources/teaching",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1023,7 +703,7 @@
 },
 {
 "link": "https://math.asu.edu/about",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1033,7 +713,7 @@
 },
 {
 "link": "https://math.asu.edu/about/welcome",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1043,7 +723,7 @@
 },
 {
 "link": "https://math.asu.edu/about/news",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1053,7 +733,7 @@
 },
 {
 "link": "https://math.asu.edu/about/news/newsletters",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1063,7 +743,7 @@
 },
 {
 "link": "https://math.asu.edu/about/academics",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1073,7 +753,7 @@
 },
 {
 "link": "https://math.asu.edu/about/academics/humanities",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1083,7 +763,7 @@
 },
 {
 "link": "https://math.asu.edu/about/academics/natural-sciences",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1093,7 +773,7 @@
 },
 {
 "link": "https://math.asu.edu/about/academics/social-sciences",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1103,7 +783,7 @@
 },
 {
 "link": "https://math.asu.edu/about/facts",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1113,7 +793,7 @@
 },
 {
 "link": "https://math.asu.edu/about/awards",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1123,7 +803,7 @@
 },
 {
 "link": "https://math.asu.edu/about/people",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,
@@ -1133,7 +813,7 @@
 },
 {
 "link": "https://math.asu.edu/about/contact",
-"buttonsGrade": 100,
+"buttonsGrade": 50,
 "unitNameGrade": 100,
 "globalASULinksGrade": 100,
 "faviconGrade": 100,

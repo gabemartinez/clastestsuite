@@ -2,16 +2,14 @@
 
     <div class="container">
 
-      <h1><%= title %> Results</h1>
+      <h1><%= title %></h1>
 
       <h4>You are testing site: <a href="<%= data.mainSiteLink %>" target="_blank"><%= data.mainSiteLink %></a></h4>
       <hr />
 
-      <h2>Results</h2>
-
       <div class="row">
         <div class="col-md-12">
-          <h4>Sitemap pages</h4>
+          <h4>Pages</h4>
           <table class="table table-hover">
             <caption>Total pages: <%= data.siteLinks.length %></caption>
             <thead>
@@ -23,8 +21,11 @@
             <tbody>
               <% for(var i=0; i < data.siteLinks.length; i++) { %>
                  <tr>
-                   <td><a href="runall/singlegrade/<%= i %>"><%= data.siteLinks[i].link %></a></td>
-                   <td><%= data.siteLinks[i].overallGrade %></td>
+                   <td><a href="runall/singlegrade/<%= url %>/<%= i %>"><%= data.siteLinks[i].link %></a></td>
+                   <%
+                     var ourOverallGrade = (data.siteLinks[i].buttonsGrade+data.siteLinks[i].unitNameGrade+data.siteLinks[i].globalASULinksGrade+data.siteLinks[i].faviconGrade+data.siteLinks[i].logoGrade+data.siteLinks[i].footerGrade)/6;
+                   %>
+                   <td><%= Math.round(ourOverallGrade) %></td>
                  </tr>
               <% } %>
             </tbody>

@@ -83,13 +83,13 @@
         },
         {
             "link": "https://afrotc.clas.asu.edu/cadetlife",
-            "buttonsGrade": 100,
+            "buttonsGrade": 50,
             "unitNameGrade": 100,
             "globalASULinksGrade": 100,
             "faviconGrade": 100,
             "logoGrade": 100,
             "footerGrade": 100,
-            "overallGrade": 100
+            "overallGrade": 91
         },
         {
             "link": "https://afrotc.clas.asu.edu/alumni",
@@ -123,7 +123,7 @@
         },
         {
             "link": "https://afrotc.clas.asu.edu/contact",
-            "buttonsGrade": 100,
+            "buttonsGrade": 25,
             "unitNameGrade": 100,
             "globalASULinksGrade": 100,
             "faviconGrade": 100,
