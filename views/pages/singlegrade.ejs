@@ -1,6 +1,12 @@
-<% include ../partials/head %>
+<% include ../partials/report-head %>
 
     <div class="container">
+
+      <a href="javascript:genPDF()" id="savepdf">Save as pdf</a>
+
+    </div>
+
+    <div class="container" id="singlegradecontainer">
 
       <h1>Single Page Report</h1>
 
@@ -29,8 +35,6 @@
       <hr />
 
       <h2>Overall Grade: <%= Math.round(ourOverallGrade) %></h2>
-
-      <a href="/runall/singlegrade/savepdf">Save as pdf</a>
 
     </div>
 

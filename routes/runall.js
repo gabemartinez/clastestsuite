@@ -4,7 +4,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 
 var fs = require('fs');
-var pdf = require('html-pdf');
 
 // var rmdir = require('rmdir');
 // var path = './tests/';
@@ -35,18 +34,6 @@ router.get('/', function(req, res, next) {
   //   console.log('all files are removed');
   // });
   res.render('../views/pages/runall', { title: 'Run All Tests' });
-});
-
-router.get('/singlegrade/savepdf', function(req, res, next) {
-  // res.render('../views/pages/singlegrade', { title: 'Single Page Grade', linkid, data });
-  res.json(req.hostname)
-  var html = fs.readFileSync('./views/pages/test.html', 'utf8');
-  var options = { format: 'Letter' };
-
-  pdf.create(html, options).toFile('./pdfReports/test.pdf', function(err, res) {
-    if (err) return console.log(err);
-    console.log(res);
-  });
 });
 
 router.get('/singlegrade/:dataid/:linkid', function(req, res, next) {
