@@ -1,0 +1,705 @@
+{
+    "mainSiteLink": "https://sms.asu.edu",
+    "siteLinks": [
+{
+"link": "https://sms.asu.edu",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/degrees",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/degrees/undergrad",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/degrees/minors-certs",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/degrees/grad",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/degrees/accelerated",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/why",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/admission",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/admission/undergraduate",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/admission/graduate",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/admission/transfer",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/admission/international",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/campus-life",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/tuition",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/deans-circle-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/faire-elizabeth-virgin-sax-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/first-generation-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/research-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/school-department-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/scholarships/study-abroad-scholarships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships/maher",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships/LGBT",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships/excellence-awards",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships/dept-school",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/fellowships/swift",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/student-life",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/advising",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/advising/department-advisors",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/advising/transitional",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/student-success",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/student-success/tutoring",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/residential-college",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/residential-college/communities",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/residential-college/clas-academy",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/residential-college/res-team",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/get-involved",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/get-involved/clubs",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/get-involved/clubs/clas",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/get-involved/study-abroad",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/internships",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/transfer-experience",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/international-experience",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/first-year-experience",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/first-year/orientation",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/first-year/discovery",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/research",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/research/centers",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/research/undergraduate",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/research/graduate",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/interdisciplinary-research",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/research/numbers",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/engage",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/engage/stay-engaged",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/engage/stay-engaged/leaders",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/alumni",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/signature-events",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/wadesmithlecture",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/hearts-and-scholars",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/marshall-lecture",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/Golden-Reunion",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/deansciencelecture",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/engage/stay-engaged/deans-council",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/content/2020-giving-page",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/engage/causes",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/about/facts",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/about/awards",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/about/people",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://sms.asu.edu/about/contact",
+"buttonsGrade": 75,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+}
+]
+}

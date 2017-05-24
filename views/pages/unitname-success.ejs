@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-12">
         <table class="table table-hover">
-          <caption>Unit Names on page: <%= pf.length %></caption>
+          <caption>Unit Names on page: <%= un.length %></caption>
           <thead>
             <tr>
               <th>Text</th>
@@ -18,11 +18,11 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < pf.length; i++) { %>
+            <% for(var i=0; i < un.length; i++) { %>
                <tr>
-                 <td><%= pf[i].text %></td>
-                 <td><%= pf[i].casing %></td>
-                 <td><%= pf[i].passfail %></td>
+                 <td><%= un[i].text %></td>
+                 <td><%= un[i].casing %></td>
+                 <td><%= un[i].passfail %></td>
                </tr>
             <% } %>
           </tbody>

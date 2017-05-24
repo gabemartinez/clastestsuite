@@ -1,0 +1,145 @@
+{
+    "mainSiteLink": "https://afrotc.clas.asu.edu/home",
+    "siteLinks": [
+        {
+            "link": "https://afrotc.clas.asu.edu/home",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/about",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/staff",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/orgs",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/info",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/eo",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/scholarships",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/info",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/cadetlife",
+            "buttonsGrade": 50,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 91
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/alumni",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/resources",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/faq",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/contact",
+            "buttonsGrade": 25,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        },
+        {
+            "link": "https://afrotc.clas.asu.edu/login",
+            "buttonsGrade": 100,
+            "unitNameGrade": 100,
+            "globalASULinksGrade": 100,
+            "faviconGrade": 100,
+            "logoGrade": 100,
+            "footerGrade": 100,
+            "overallGrade": 100
+        }
+    ]
+}

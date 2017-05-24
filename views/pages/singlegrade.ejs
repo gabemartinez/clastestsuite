@@ -1,0 +1,41 @@
+<% include ../partials/report-head %>
+
+    <div class="container">
+
+      <a href="javascript:genPDF()" id="savepdf">Save as pdf</a>
+
+    </div>
+
+    <div class="container" id="singlegradecontainer">
+
+      <h1>Single Page Report</h1>
+
+      <h3>Page: <a href="<%= data.siteLinks[linkid].link %>" target="_blank"><%= data.siteLinks[linkid].link %></a></h3>
+
+      <h3>Tests</h3>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-4"><p><h4>Buttons Grade</h4> <h3><%= data.siteLinks[linkid].buttonsGrade %></h3></p></div>
+        <div class="col-md-4"><p><h4>Unit Name Grade</h4> <h3><%= data.siteLinks[linkid].unitNameGrade %></h3></p></div>
+        <div class="col-md-4"><p><h4>Global ASU Links Grade</h4> <h3><%= data.siteLinks[linkid].globalASULinksGrade %></h3></p></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4"><p><h4>Favicons Grade</h4> <h3><%= data.siteLinks[linkid].faviconGrade %></h3></p></div>
+        <div class="col-md-4"><p><h4>Logo Grade</h4> <h3><%= data.siteLinks[linkid].logoGrade %></h3></p></div>
+        <div class="col-md-4"><p><h4>Footer Grade</h4> <h3><%= data.siteLinks[linkid].footerGrade %></h3></p></div>
+      </div>
+
+      <%
+        var ourOverallGrade = (data.siteLinks[linkid].buttonsGrade+data.siteLinks[linkid].unitNameGrade+data.siteLinks[linkid].globalASULinksGrade+data.siteLinks[linkid].faviconGrade+data.siteLinks[linkid].logoGrade+data.siteLinks[linkid].footerGrade)/6;
+      %>
+
+      <hr />
+
+      <h2>Overall Grade: <%= Math.round(ourOverallGrade) %></h2>
+
+    </div>
+
+<% include ../partials/footer %>

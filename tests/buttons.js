@@ -3,7 +3,6 @@ var buttons = function(req, res, next) {
   var request = require('request');
   var cheerio = require('cheerio');
   var Case = require('case');
-  var chalk = require('chalk');
 
   // var url = "http://clas.asu.edu";
   var url = req.body.page;

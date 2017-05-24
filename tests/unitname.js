@@ -39,7 +39,7 @@ var unitname = function(req, res, next) {
 
       });
 
-      req.pf = parsedResults;
+      req.un = parsedResults;
       next();
 
     };

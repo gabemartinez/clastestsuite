@@ -1,0 +1,655 @@
+{
+    "mainSiteLink": "https://physics.asu.edu",
+    "siteLinks": [
+{
+"link": "https://physics.asu.edu",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/degrees",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/degrees/undergrad",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/degrees/minors-certs",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/degrees/grad",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/degrees/accelerated",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/why",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/admission",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/admission/undergraduate",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/admission/graduate",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/admission/transfer",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/admission/international",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/campus-life",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/tuition",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/deans-circle-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/faire-elizabeth-virgin-sax-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/first-generation-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/research-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/school-department-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/scholarships/study-abroad-scholarships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships/maher",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships/LGBT",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships/excellence-awards",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships/dept-school",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/fellowships/swift",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/student-life",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/advising",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/disqualification-probation",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/internship-course",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/student/graduation",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/medical-withdrawal",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/recognition-awards",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/science-society",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/transfer-courses",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/student-success/tutoring",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/Undergraduate-Readmission",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/faculty-staff",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/academic-integrity-resources",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/faculty/curriculum-development/4-1",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/academic-personnel",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/advisor",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/budget-financial-services",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/business-office",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/college-governence",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/disruptive-behavior",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/facilities",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/first-year-forward",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/marketing",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/research-enterprise",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/student-alert-process",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/resources/teaching",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/welcome",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/news",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/news/newsletters",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/academics",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/academics/humanities",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/academics/natural-sciences",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/academics/social-sciences",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/facts",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/awards",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/people",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+},
+{
+"link": "https://physics.asu.edu/about/contact",
+"buttonsGrade": 50,
+"unitNameGrade": 100,
+"globalASULinksGrade": 100,
+"faviconGrade": 100,
+"logoGrade": 100,
+"footerGrade": 100,
+"overallGrade": 100
+}
+]
+}
