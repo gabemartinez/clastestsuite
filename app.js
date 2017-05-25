@@ -13,6 +13,7 @@ var faviconroute = require('./routes/favicon');
 var sitemap = require('./routes/sitemap');
 var globalasulinks = require('./routes/globalasulinks');
 var runall = require('./routes/runall');
+var testrunner = require('./routes/testrunner');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.use('/favicon', faviconroute);
 app.use('/sitemap', sitemap);
 app.use('/globalasulinks', globalasulinks);
 app.use('/runall', runall);
+app.use('/testrunner', testrunner);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
