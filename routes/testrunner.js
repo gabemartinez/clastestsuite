@@ -3,6 +3,8 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 
+var websparkcheck = require('../middleware/websparkcheck');
+
 // create application/json parser
 var jsonParser = bodyParser.json();
 
@@ -14,9 +16,14 @@ router.get('/', function(req, res, next) {
   res.render('../views/pages/testrunner');
 });
 
-router.post('/', urlencodedParser, function(req, res, next) {
+router.post('/', urlencodedParser, websparkcheck, function(req, res, next) {
   var site = req.body.site;
   res.render('../views/pages/testrunner-started', { site });
+});
+
+router.get('/notwebspark', function(req, res, next) {
+  var site = req.body.site;
+  res.render('../views/pages/notwebspark', { site: site });
 });
 
 
