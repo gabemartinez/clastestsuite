@@ -30,7 +30,8 @@ router.get('/notwebspark', function(req, res, next) {
 
 
 router.get('/allreports', function(req, res, next) {
-  res.json('all reports');
+  // res.json('all reports');
+  res.render('../views/pages/allreports');
 });
 
 router.get('/report/:reportid', function(req, res, next) {

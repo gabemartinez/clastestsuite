@@ -17,9 +17,9 @@ var websparkcheck = function(req, res, next) {
       };
 
       if (typeof websparkversion === 'undefined' || !websparkversion) {
-      //  site = req.body.site;
-       console.log(site);
-       res.render('/pages/notwebspark');
+      //  console.log(site);
+       res.render('../views/pages/notwebspark', { site: site });
+       return;
       } else {
        next();
       };
