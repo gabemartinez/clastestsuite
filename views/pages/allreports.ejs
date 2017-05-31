@@ -10,9 +10,10 @@
           <caption>Total reports: <%= sites.length %></caption>
           <thead>
             <tr>
-              <th>URL</th>
+              <th>Site</th>
               <th>Date</th>
-              <th>Link to Report</th>
+              <th>Report</th>
+              <th>Grade</th>
             </tr>
           </thead>
           <tbody>
@@ -21,6 +22,7 @@
                  <td><%= sites[i].url %></td>
                  <td><%= sites[i].created_at %></td>
                  <td><a href="report/<%= sites[i]._id %>">REPORT</a></td>
+                 <td>Grade goes here.</td>
                </tr>
             <% } %>
           </tbody>
