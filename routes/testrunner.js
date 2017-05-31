@@ -20,6 +20,7 @@ router.get('/', function(req, res, next) {
   res.render('../views/pages/testrunner');
 });
 
+/* POST testrunner page. */
 router.post('/', urlencodedParser, websparkcheck, function(req, res, next) {
 
   var site = req.body.site;
@@ -36,24 +37,44 @@ router.post('/', urlencodedParser, websparkcheck, function(req, res, next) {
   res.render('../views/pages/testrunner-started', { site, thisId: thisSite._id });
 });
 
+/* GET not testrunner page. */
 router.get('/notwebspark', function(req, res, next) {
   var site = req.body.site;
-  res.render('../views/pages/notwebspark', { site: site });
+  res.render('../views/pages/notwebspark', { site });
 });
 
-
-
-
+/* GET allreports page. */
 router.get('/allreports', function(req, res, next) {
   // res.json('all reports');
-  res.render('../views/pages/allreports');
+  Site.find(function (err, sites) {
+      if (err) {
+          // Note that this error doesn't mean nothing was found,
+          // it means the database had an error while searching, hence the 500 status
+          res.status(500).send(err)
+      } else {
+          // send the list of all sites
+          // res.json(sites);
+          res.render('../views/pages/allreports', { sites });
+      }
+  });
 });
 
+/* GET report by id page. */
 router.get('/report/:reportid', function(req, res, next) {
   var reportid = req.params.reportid;
-  res.json({reportid});
+  // res.json({reportid});
+  Site.find({"_id": reportid}, function (err, site) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          // send the list of all sites in database with get id
+          console.log(site);
+          res.render('../views/pages/single-report', { site });
+      }
+  });
 });
 
+/* GET test by id page. */
 router.get('/report/:reportid/:testid', function(req, res, next) {
   var reportid = req.params.reportid;
   var testid = req.params.testid;
