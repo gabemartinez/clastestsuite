@@ -2,7 +2,9 @@
 
     <div class="container">
 
-      <h1>All reports.</h1>
+      <h1>All site reports.</h1>
+
+      <hr />
 
       <div class="row">
         <div class="col-md-12">
@@ -11,9 +13,9 @@
           <thead>
             <tr>
               <th>Site</th>
-              <th>Date</th>
-              <th>Report</th>
-              <th>Grade</th>
+              <th>Date of Report</th>
+              <th>Overall Site Grade</th>
+              <th>Report Link</th>
             </tr>
           </thead>
           <tbody>
@@ -21,8 +23,8 @@
                <tr>
                  <td><%= sites[i].url %></td>
                  <td><%= sites[i].created_at %></td>
-                 <td><a href="report/<%= sites[i]._id %>">REPORT</a></td>
                  <td>Grade goes here.</td>
+                 <td><a href="report/<%= sites[i]._id %>">REPORT</a></td>
                </tr>
             <% } %>
           </tbody>

@@ -9,6 +9,8 @@ var Site = require('../models/Site');
 
 var websparkcheck = require('../middleware/websparkcheck');
 
+var sitemap = require('../middleware/sitemap');
+
 // create application/json parser
 var jsonParser = bodyParser.json();
 
@@ -21,16 +23,17 @@ router.get('/', function(req, res, next) {
 });
 
 /* POST testrunner page. */
-router.post('/', urlencodedParser, websparkcheck, function(req, res, next) {
+router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, next) {
 
   var site = req.body.site;
+  var sitemapLinks = req.sitemapLinks;
 
-  var thisSite = new Site({ url: site, links: ['blah1', 'blah2', 'blah3', 'blah4'] });
+  var thisSite = new Site({ url: site, links: sitemapLinks });
   thisSite.save(function (err) {
     if (err) {
       console.log(err);
     } else {
-      console.log(thisSite);
+      // console.log(thisSite);
     }
   });
 
@@ -68,17 +71,25 @@ router.get('/report/:reportid', function(req, res, next) {
           res.status(500).send(err)
       } else {
           // send the list of all sites in database with get id
-          console.log(site);
+          // console.log(site);
           res.render('../views/pages/single-report', { site });
       }
   });
 });
 
-/* GET test by id page. */
-router.get('/report/:reportid/:testid', function(req, res, next) {
+/* GET page specific report. */
+router.get('/report/:reportid/:pageid', function(req, res, next) {
   var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+  res.render('../views/pages/single-page-report', {reportid, pageid});
+});
+
+/* GET test specific report from page. */
+router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
   var testid = req.params.testid;
-  res.json({reportid, testid});
+  res.render('../views/pages/single-test-report', {reportid, pageid, testid});
 });
 
 module.exports = router;
