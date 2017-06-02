@@ -4,10 +4,12 @@
 
       <h1>Site report.</h1>
 
+      <hr />
+
       <h4>Report ID: <a href="/testrunner/report/<%= site[0]._id %>"><%= site[0]._id %></a></h4>
-      <h4>Date: <%= site[0].created_at %></h4>
-      <h4>Site: <%= site[0].url %></h4>
-      <h2>Overall Site Grade: </h2>
+      <h4>Report Date: <%= site[0].created_at %></h4>
+      <h4>Report Main Site URL: <%= site[0].url %></h4>
+      <h2>Overall Site Grade: Grade %</h2>
 
       <hr />
 
@@ -17,7 +19,7 @@
           <caption>Total links: <%= site[0].links.length %></caption>
           <thead>
             <tr>
-              <th>Page</th>
+              <th>Page URL</th>
               <th>Page Grade</th>
               <th>Page Report Link</th>
             </tr>
@@ -26,8 +28,8 @@
             <% for(var i=0; i < site[0].links.length; i++) { %>
                <tr>
                  <td><%= site[0].links[i] %></td>
-                 <td>Grade goes here.</td>
-                 <td><a href="<%= site[0]._id %>/<%= i %>">PAGE REPORT</a></td>
+                 <td>Grade %</td>
+                 <td><a href="<%= site[0]._id %>/<%= i %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>
