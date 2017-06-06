@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
+var pdf = require('html-pdf');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite');
@@ -91,5 +92,27 @@ router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
   var testid = req.params.testid;
   res.render('../views/pages/single-test-report', {reportid, pageid, testid});
 });
+
+router.get('/testing/pdf', (req, res) => {
+  pdf.create(html).toStream((err, pdfStream) => {
+    if (err) {
+      // handle error and return a error response code
+      console.log(err)
+      return res.sendStatus(500)
+    } else {
+      // send a status code of 200 OK
+      res.statusCode = 200
+
+      // once we are done reading end the response
+      pdfStream.on('end', () => {
+        // done reading
+        return res.end()
+      })
+
+      // pipe the contents of the PDF directly to the response
+      pdfStream.pipe(res)
+    }
+  })
+})
 
 module.exports = router;
