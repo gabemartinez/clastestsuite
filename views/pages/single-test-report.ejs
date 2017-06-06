@@ -1,0 +1,20 @@
+<% include ../partials/testrunner-head %>
+
+    <div class="container">
+
+      <h1>Test report.</h1>
+
+      <hr />
+
+      <h4>Report ID: <a href="/testrunner/report/<%= reportid %>"><%= reportid %></a></h4>
+      <h4>Page ID: <%= pageid %></h4>
+      <h4>Test ID: <%= testid %></h4>
+      <h2>Grade: Grade %</h2>
+
+      <hr />
+
+      <p>Single test results listed here.</p>
+
+    </div>
+
+<% include ../partials/testrunner-footer %>

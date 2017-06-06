@@ -2,7 +2,35 @@
 
     <div class="container">
 
-      <h1>All reports</h1>
+      <h1>All reports.</h1>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+        <table class="table table-hover">
+          <caption>Total reports: <%= sites.length %></caption>
+          <thead>
+            <tr>
+              <th>Report Site URL</th>
+              <th>Report Date</th>
+              <th>Report Grade</th>
+              <th>Report Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < sites.length; i++) { %>
+               <tr>
+                 <td><%= sites[i].url %></td>
+                 <td><%= sites[i].created_at %></td>
+                 <td>Grade %</td>
+                 <td><a href="report/<%= sites[i]._id %>">LINK</a></td>
+               </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      </div>
 
     </div>
 
