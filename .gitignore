@@ -69,5 +69,7 @@ backstop_data/bitmaps_test
 tests/downloadedImages
 tests/resultImages
 
+public/pdfreports
+
 
 # End of https://www.gitignore.io/api/node

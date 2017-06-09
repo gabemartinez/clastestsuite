@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
+var phantom = require('phantom');
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite');
@@ -72,9 +73,32 @@ router.get('/report/:reportid', function(req, res, next) {
       } else {
           // send the list of all sites in database with get id
           // console.log(site);
-          res.render('../views/pages/single-report', { site });
+          res.render('../views/pages/single-report', { site, reportid });
       }
   });
+});
+
+/* GET download pdf single-report. */
+router.get('/savesitereport/:reportid', function(req, res, next) {
+
+  var reportid = req.params.reportid;
+
+  phantom.create().then(function(ph) {
+      ph.createPage().then(function(page) {
+        //viewportSize being the actual size of the headless browser
+        page.property("viewportSize", {width: 960, height: 1080});
+        //the rest of the code is the same as the previous example
+          page.open("http://localhost:3000/testrunner/report/"+reportid).then(function(status) {
+              page.render('./public/pdfreports/site_report_'+reportid+'.pdf').then(function() {
+                  console.log(reportid);
+                  console.log('Single-report PDF Rendered');
+                  ph.exit();
+                  res.download('./public/pdfreports/site_report_'+reportid+'.pdf');
+              });
+          });
+      });
+  });
+
 });
 
 /* GET page specific report. */
@@ -84,12 +108,61 @@ router.get('/report/:reportid/:pageid', function(req, res, next) {
   res.render('../views/pages/single-page-report', {reportid, pageid});
 });
 
+/* GET download pdf single-page-report. */
+router.get('/savesitereport/:reportid/:pageid', function(req, res, next) {
+
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+
+  phantom.create().then(function(ph) {
+      ph.createPage().then(function(page) {
+        //viewportSize being the actual size of the headless browser
+        page.property("viewportSize", {width: 960, height: 1080});
+        //the rest of the code is the same as the previous example
+          page.open("http://localhost:3000/testrunner/report/"+reportid+'/'+pageid).then(function(status) {
+              page.render('./public/pdfreports/page_report_'+reportid+'_'+pageid+'.pdf').then(function() {
+                  console.log(reportid);
+                  console.log('Single-page-report PDF Rendered');
+                  ph.exit();
+                  res.download('./public/pdfreports/page_report_'+reportid+'_'+pageid+'.pdf');
+              });
+          });
+      });
+  });
+
+});
+
 /* GET test specific report from page. */
 router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
   var testid = req.params.testid;
   res.render('../views/pages/single-test-report', {reportid, pageid, testid});
+});
+
+/* GET download pdf single-test-page-report. */
+router.get('/savesitereport/:reportid/:pageid/:testid', function(req, res, next) {
+
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+  var testid = req.params.testid;
+
+  phantom.create().then(function(ph) {
+      ph.createPage().then(function(page) {
+        //viewportSize being the actual size of the headless browser
+        page.property("viewportSize", {width: 960, height: 1080});
+        //the rest of the code is the same as the previous example
+          page.open("http://localhost:3000/testrunner/report/"+reportid+'/'+pageid+'/'+testid).then(function(status) {
+              page.render('./public/pdfreports/test_report_'+reportid+'_'+pageid+'_'+testid+'.pdf').then(function() {
+                  console.log(reportid);
+                  console.log('Single-test-page-reportPDF Rendered');
+                  ph.exit();
+                  res.download('./public/pdfreports/test_report_'+reportid+'_'+pageid+'_'+testid+'.pdf');
+              });
+          });
+      });
+  });
+
 });
 
 module.exports = router;
