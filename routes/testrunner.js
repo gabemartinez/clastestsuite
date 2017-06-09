@@ -89,11 +89,11 @@ router.get('/savesitereport/:reportid', function(req, res, next) {
         page.property("viewportSize", {width: 960, height: 1080});
         //the rest of the code is the same as the previous example
           page.open("http://localhost:3000/testrunner/report/"+reportid).then(function(status) {
-              page.render('./public/pdfreports/'+reportid+'.pdf').then(function() {
+              page.render('./public/pdfreports/site_report_'+reportid+'.pdf').then(function() {
                   console.log(reportid);
-                  console.log('PDF Rendered');
+                  console.log('Single-report PDF Rendered');
                   ph.exit();
-                  res.download('./public/pdfreports/'+reportid+'.pdf');
+                  res.download('./public/pdfreports/site_report_'+reportid+'.pdf');
               });
           });
       });
@@ -120,11 +120,11 @@ router.get('/savesitereport/:reportid/:pageid', function(req, res, next) {
         page.property("viewportSize", {width: 960, height: 1080});
         //the rest of the code is the same as the previous example
           page.open("http://localhost:3000/testrunner/report/"+reportid+'/'+pageid).then(function(status) {
-              page.render('./public/pdfreports/'+reportid+'_'+pageid+'.pdf').then(function() {
+              page.render('./public/pdfreports/page_report_'+reportid+'_'+pageid+'.pdf').then(function() {
                   console.log(reportid);
-                  console.log('PDF Rendered');
+                  console.log('Single-page-report PDF Rendered');
                   ph.exit();
-                  res.download('./public/pdfreports/'+reportid+'_'+pageid+'.pdf');
+                  res.download('./public/pdfreports/page_report_'+reportid+'_'+pageid+'.pdf');
               });
           });
       });
@@ -138,6 +138,31 @@ router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
   var pageid = req.params.pageid;
   var testid = req.params.testid;
   res.render('../views/pages/single-test-report', {reportid, pageid, testid});
+});
+
+/* GET download pdf single-test-page-report. */
+router.get('/savesitereport/:reportid/:pageid/:testid', function(req, res, next) {
+
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+  var testid = req.params.testid;
+
+  phantom.create().then(function(ph) {
+      ph.createPage().then(function(page) {
+        //viewportSize being the actual size of the headless browser
+        page.property("viewportSize", {width: 960, height: 1080});
+        //the rest of the code is the same as the previous example
+          page.open("http://localhost:3000/testrunner/report/"+reportid+'/'+pageid+'/'+testid).then(function(status) {
+              page.render('./public/pdfreports/test_report_'+reportid+'_'+pageid+'_'+testid+'.pdf').then(function() {
+                  console.log(reportid);
+                  console.log('Single-test-page-reportPDF Rendered');
+                  ph.exit();
+                  res.download('./public/pdfreports/test_report_'+reportid+'_'+pageid+'_'+testid+'.pdf');
+              });
+          });
+      });
+  });
+
 });
 
 module.exports = router;
