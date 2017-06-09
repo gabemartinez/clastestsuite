@@ -78,6 +78,21 @@ router.get('/report/:reportid', function(req, res, next) {
   });
 });
 
+/* GET report by id page. */
+router.get('/report-sortable/:reportid', function(req, res, next) {
+  var reportid = req.params.reportid;
+  // res.json({reportid});
+  Site.find({"_id": reportid}, function (err, site) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          // send the list of all sites in database with get id
+          // console.log(site);
+          res.render('../views/pages/single-report-sort', { site, reportid });
+      }
+  });
+});
+
 /* GET download pdf single-report. */
 router.get('/savesitereport/:reportid', function(req, res, next) {
 

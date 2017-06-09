@@ -1,5 +1,11 @@
 <% include ../partials/testrunner-head %>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+      $('#allreportstable').DataTable();
+  } );
+</script>
+
     <div class="container">
 
       <h1>All reports.</h1>
@@ -8,7 +14,7 @@
 
       <div class="row">
         <div class="col-md-12">
-        <table class="table table-hover">
+        <table class="table table-striped table-bordered" id="allreportstable">
           <caption>Total reports: <%= sites.length %></caption>
           <thead>
             <tr>
