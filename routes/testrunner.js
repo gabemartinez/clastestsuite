@@ -12,11 +12,46 @@ var websparkcheck = require('../middleware/websparkcheck');
 
 var sitemap = require('../middleware/sitemap');
 
+const Agenda = require('agenda');
+
 // create application/json parser
 var jsonParser = bodyParser.json();
 
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+/* GET test specific report from page. */
+router.get('/testingagenda', function(req, res, next) {
+
+  // res.json({blah:"blah"});
+
+  var mongoConnectionString = "mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite";
+
+  var agenda = new Agenda({db: {address: mongoConnectionString}});
+
+  // or override the default collection name:
+  // var agenda = new Agenda({db: {address: mongoConnectionString, collection: "jobCollectionName"}});
+
+  // or pass additional connection options:
+  // var agenda = new Agenda({db: {address: mongoConnectionString, collection: "jobCollectionName", options: {server:{auto_reconnect:true}}}});
+
+  // or pass in an existing mongodb-native MongoClient instance
+  // var agenda = new Agenda({mongo: myMongoClient});
+
+  agenda.define('delete old users', function(job, done) {
+    console.log('deleting...');
+  });
+
+  agenda.on('ready', function() {
+    agenda.every('3 minutes', 'delete old users');
+
+    // Alternatively, you could also do:
+    agenda.every('*/3 * * * *', 'delete old users');
+
+    agenda.start();
+  });
+
+});
 
 /* GET testrunner page. */
 router.get('/', function(req, res, next) {
