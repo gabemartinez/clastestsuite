@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
   res.render('../views/pages/testrunner');
 });
 
-/* POST testrunner pageeee. */
+/* POST testrunner page. */
 router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, next) {
 
   var site = req.body.site;
