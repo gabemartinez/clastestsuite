@@ -4,21 +4,28 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var phantom = require('phantom');
 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite');
-var Site = require('../models/Site');
-
-var websparkcheck = require('../middleware/websparkcheck');
-
-var sitemap = require('../middleware/sitemap');
-
-const Agenda = require('agenda');
-
 // create application/json parser
 var jsonParser = bodyParser.json();
 
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+//--
+
+var mongoose = require('mongoose');
+var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
+mongoose.connect(mongoconnection);
+var Site = require('../models/Site');
+
+const Agenda = require('agenda');
+
+//--
+
+var websparkcheck = require('../middleware/websparkcheck');
+var sitemap = require('../middleware/sitemap');
+var buttons = require('../middleware/buttons');
+
+//--
 
 /* GET testrunner page. */
 router.get('/', function(req, res, next) {
@@ -36,22 +43,42 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
     if (err) {
       console.log(err);
     } else {
-      // console.log(thisSiasdfate);
+      // console.log(thisSite);
     }
   });
 
-  var mongoConnectionString = "mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite";
-
+  // agenda process
+  var mongoConnectionString = mongoconnection;
   var agenda = new Agenda({db: {address: mongoConnectionString}});
 
-  agenda.define('process url', function(job, done) {
-    console.log('process url...');
+  agenda.define('check buttons', function(job, done) {
+    console.log('checking buttons...');
+    // console.log(job);
+  });
+
+  agenda.define('check favicon', function(job, done) {
+    console.log('checking favicon...');
+    // console.log(job);
+  });
+
+  agenda.define('check global asu link', function(job, done) {
+    console.log('checking global asu link...');
+    // console.log(job);
+  });
+
+  agenda.define('check unitnames', function(job, done) {
+    console.log('checking unitnames...');
+    // console.log(job);
   });
 
   agenda.on('ready', function() {
-    agenda.every('3 minutes', 'process url');
+    agenda.now('check buttons');
+    agenda.now('check favicon');
+    agenda.now('check global asu link');
+    agenda.now('check unitnames');
     agenda.start();
   });
+  // agenda process
 
   res.render('../views/pages/testrunner-started', { site, thisId: thisSite._id });
 });
