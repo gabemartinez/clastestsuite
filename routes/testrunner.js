@@ -36,7 +36,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
     if (err) {
       console.log(err);
     } else {
-      // console.log(thisSite);
+      // console.log(thisSiasdfate);
     }
   });
 
