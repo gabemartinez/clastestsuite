@@ -4,6 +4,10 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var phantom = require('phantom');
 
+//--
+
+var formatter = require("../helpers/formatString");
+
 // create application/json parser
 var jsonParser = bodyParser.json();
 
@@ -54,6 +58,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   agenda.define('check buttons', function(job, done) {
     console.log('checking buttons...');
     // console.log(job);
+    console.log(formatter(site));
   });
 
   agenda.define('check favicon', function(job, done) {
@@ -72,7 +77,8 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
 
   agenda.on('ready', function() {
-    agenda.now('check buttons');
+    // agenda.now('check buttons');
+    agenda.every('2 minutes', 'check buttons');
     agenda.now('check favicon');
     agenda.now('check global asu link');
     agenda.now('check unitnames');
