@@ -4,18 +4,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var phantom = require('phantom');
 
-//--
-
-var formatter = require("../helpers/formatString");
-
-// create application/json parser
-var jsonParser = bodyParser.json();
-
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
-
-//--
-
 var mongoose = require('mongoose');
 var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
 mongoose.connect(mongoconnection);
@@ -23,13 +11,21 @@ var Site = require('../models/Site');
 
 const Agenda = require('agenda');
 
-//--
+var jsonParser = bodyParser.json();
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
+//-- Helpers
+
+var formatter = require("../helpers/formatString");
+
+//-- Middleware
 
 var websparkcheck = require('../middleware/websparkcheck');
 var sitemap = require('../middleware/sitemap');
-var buttons = require('../middleware/buttons');
+// var buttons = require('../middleware/buttons');
 
-//--
+//-- Routes
 
 /* GET testrunner page. */
 router.get('/', function(req, res, next) {

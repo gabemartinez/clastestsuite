@@ -1,4 +1,4 @@
-var sitemapgen = function(req, res, next) {
+var sitemap = function(req, res, next) {
 
   var request = require('request');
   var cheerio = require('cheerio');
@@ -40,4 +40,4 @@ var sitemapgen = function(req, res, next) {
 
 };
 
-module.exports = sitemapgen;
+module.exports = sitemap;
