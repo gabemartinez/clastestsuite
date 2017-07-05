@@ -17,7 +17,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //-- Helpers
 
-var formatter = require("../helpers/formatString");
+// var formatter = require("../helpers/formatString");
+var buttons = require("../helpers/buttons");
 
 //-- Middleware
 
@@ -54,7 +55,9 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   agenda.define('check buttons', function(job, done) {
     console.log('checking buttons...');
     // console.log(job);
-    console.log(formatter(site));
+    // console.log(formatter(site));
+    var thisSiteID = thisSite._id;
+    buttons(thisSiteID);
   });
 
   agenda.define('check favicon', function(job, done) {
@@ -73,11 +76,11 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
 
   agenda.on('ready', function() {
-    // agenda.now('check buttons');
-    agenda.every('2 minutes', 'check buttons');
-    agenda.now('check favicon');
-    agenda.now('check global asu link');
-    agenda.now('check unitnames');
+    agenda.now('check buttons');
+    // agenda.every('2 minutes', 'check buttons');
+    // agenda.now('check favicon');
+    // agenda.now('check global asu link');
+    // agenda.now('check unitnames');
     agenda.start();
   });
   // agenda process
