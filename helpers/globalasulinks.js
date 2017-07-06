@@ -7,7 +7,7 @@ var cheerio = require('cheerio');
 var Case = require('case');
 var request = require('request-promise');
 
-// helpers/buttons.js
+// helpers/unitnames.js
 module.exports = function(siteid) {
   // return 'this site id' + siteid;
   // console.log(siteid);
@@ -42,23 +42,23 @@ module.exports = function(siteid) {
 
         function parse(body) {
             var $ = cheerio.load(body);
-            $('.btn').each(function(i, element){
+            $('div.header__sitename > span').each(function(i, element){
 
-              var buttonText = $(this).text().trim();
+              var unitname = $(this).text().trim();
               var casing = Case.of($(this).text().trim());
 
-              if ( (casing == "sentence") || (casing == "header") ){
+              if ( (casing == "title") || (casing == "capital") ){
                 var passfail = "PASS";
               } else {
                 var passfail = "FAIL";
               }
 
               console.log(i);
-              console.log(buttonText);
+              console.log(unitname);
               console.log(passfail);
 
               // var testResults = {
-              //   buttonText: buttonText,
+              //   unitname: unitname,
               //   casing: casing,
               //   passfail: passfail
               // };
