@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
 mongoose.connect(mongoconnection);
 var Site = require('../models/Site');
+var ButtonsTest = require('../models/ButtonsTest');
 
 var cheerio = require('cheerio');
 var Case = require('case');
@@ -20,6 +21,17 @@ module.exports = function(siteid) {
         console.log(err);
 
       } if (site) {
+
+        //
+        var testButtonsData = new ButtonsTest({ siteID: siteid, results: [{buttonText:'blahh', passFail: 'pass'},{buttonText:'blahhh', passFail: 'fail'}] });
+        testButtonsData.save(function (err) {
+          if (err) {
+            console.log(err);
+          } else {
+            // console.log(testButtonsData);
+          }
+        });
+        //
 
         //site object found, parse through it
         var parsedResults = [];

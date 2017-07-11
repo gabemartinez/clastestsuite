@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
 mongoose.connect(mongoconnection);
 var Site = require('../models/Site');
+var ButtonsTest = require('../models/ButtonsTest');
 
 const Agenda = require('agenda');
 
@@ -87,7 +88,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   res.render('../views/pages/testrunner-started', { site, thisId: thisSite._id });
 });
 
-/* GET not testrunner page. */
+/* GET not webspark error page. */
 router.get('/notwebspark', function(req, res, next) {
   var site = req.body.site;
   res.render('../views/pages/notwebspark', { site });
