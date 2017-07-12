@@ -20,8 +20,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // var formatter = require("../helpers/formatString");
 var buttons = require("../helpers/buttons");
-var unitnames = require("../helpers/unitnames");
-var globalasulinks = require("../helpers/globalasulinks");
+// var unitnames = require("../helpers/unitnames");
+// var globalasulinks = require("../helpers/globalasulinks");
 
 //-- Middleware
 
@@ -78,7 +78,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
 
   agenda.on('ready', function() {
     agenda.now('check buttons');
-    agenda.now('check unitnames');
+    // agenda.now('check unitnames');
     // agenda.now('check global asu links');
     // agenda.every('2 minutes', 'check buttons');
     agenda.start();

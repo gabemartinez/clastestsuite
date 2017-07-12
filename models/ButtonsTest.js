@@ -4,10 +4,12 @@ mongoose.Promise = global.Promise;
 
 var ButtonsTestSchema = new mongoose.Schema({
   siteID: String,
+  url: String,
   results: [
     {
-      buttonText: String,
-      passFail: String
+      buttontext: String,
+      casing: String,
+      passfail: String
     }
   ],
   created_at: {

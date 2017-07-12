@@ -22,19 +22,9 @@ module.exports = function(siteid) {
 
       } if (site) {
 
-        //
-        var testButtonsData = new ButtonsTest({ siteID: siteid, results: [{buttonText:'blahh', passFail: 'pass'},{buttonText:'blahhh', passFail: 'fail'}] });
-        testButtonsData.save(function (err) {
-          if (err) {
-            console.log(err);
-          } else {
-            // console.log(testButtonsData);
-          }
-        });
-        //
-
-        //site object found, parse through it
-        var parsedResults = [];
+        //site object found, parse through links
+        var parsedresults = [];
+        var thisurlresults = [];
         var urls = site.links;
 
         function parseSites(urls, callback) {
@@ -49,14 +39,16 @@ module.exports = function(siteid) {
         }
 
         function getPage(url) {
-            return request.get(url);
+            return request.get(url).catch(function(err){
+            console.error(err); // This will print any error that was thrown in the previous error handler.
+        });
         }
 
         function parse(body) {
             var $ = cheerio.load(body);
             $('.btn').each(function(i, element){
 
-              var buttonText = $(this).text().trim();
+              var buttontext = $(this).text().trim();
               var casing = Case.of($(this).text().trim());
 
               if ( (casing == "sentence") || (casing == "header") ){
@@ -65,19 +57,38 @@ module.exports = function(siteid) {
                 var passfail = "FAIL";
               }
 
-              console.log(i);
-              console.log(buttonText);
-              console.log(passfail);
+              // console.log(i);
+              // console.log(buttontext);
+              // console.log(passfail);
+              // console.log(urls[i]);
 
-              // var testResults = {
-              //   buttonText: buttonText,
-              //   casing: casing,
-              //   passfail: passfail
+              // var urlresults = {
+              //   urlstring: urls[i],
               // };
-              //
-              // parsedResults.push(testResults);
+
+              var testresults = {
+                buttontext: buttontext,
+                casing: casing,
+                passfail: passfail
+              };
+
+              // thisurlresults.push(urlresults);
+              parsedresults.push(testresults);
 
             });
+
+            // console.log(parsedresults);
+
+            //
+            var testButtonsData = new ButtonsTest({ siteID: siteid, url: 'blakkow.com', results: parsedresults });
+            testButtonsData.save(function (err) {
+              if (err) {
+                console.log(err);
+              } else {
+                // console.log(testButtonsData);
+              }
+            });
+            //
 
         }
 
