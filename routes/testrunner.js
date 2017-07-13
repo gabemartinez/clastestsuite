@@ -19,7 +19,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 //-- Helpers
 
 // var formatter = require("../helpers/formatString");
-var buttons = require("../helpers/buttons");
+// var buttons = require("../helpers/buttons");
+var test = require("../helpers/test");
 // var unitnames = require("../helpers/unitnames");
 // var globalasulinks = require("../helpers/globalasulinks");
 
@@ -52,32 +53,40 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
 
   // agenda process
-  var mongoConnectionString = mongoconnection;
-  var agenda = new Agenda({db: {address: mongoConnectionString}});
+  // var mongoConnectionString = mongoconnection;
+  var agenda = new Agenda({db: {address: mongoconnection}});
 
-  agenda.define('check buttons', function(job, done) {
-    console.log('checking buttons...');
+  agenda.define('check dom', function(job, done) {
+    console.log('checking dom...');
     // console.log(job);
     var thisSiteID = thisSite._id;
-    buttons(thisSiteID);
+    test(thisSiteID);
   });
 
-  agenda.define('check unitnames', function(job, done) {
-    console.log('checking unitnames...');
-    // console.log(job);
-    var thisSiteID = thisSite._id;
-    unitnames(thisSiteID);
-  });
+  // agenda.define('check buttons', function(job, done) {
+  //   console.log('checking buttons...');
+  //   console.log(job);
+  //   var thisSiteID = thisSite._id;
+  //   buttons(thisSiteID);
+  // });
 
-  agenda.define('check global asu links', function(job, done) {
-    console.log('checking global asu links...');
-    // console.log(job);
-    // var thisSiteID = thisSite._id;
-    // globalasulinks(thisSiteID);
-  });
+  // agenda.define('check unitnames', function(job, done) {
+  //   console.log('checking unitnames...');
+  //   console.log(job);
+  //   var thisSiteID = thisSite._id;
+  //   unitnames(thisSiteID);
+  // });
+
+  // agenda.define('check global asu links', function(job, done) {
+  //   console.log('checking global asu links...');
+  //   console.log(job);
+  //   var thisSiteID = thisSite._id;
+  //   globalasulinks(thisSiteID);
+  // });
 
   agenda.on('ready', function() {
-    agenda.now('check buttons');
+    agenda.now('check dom');
+    // agenda.now('check buttons');
     // agenda.now('check unitnames');
     // agenda.now('check global asu links');
     // agenda.every('2 minutes', 'check buttons');
@@ -199,7 +208,16 @@ router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
   var testid = req.params.testid;
-  res.render('../views/pages/single-test-report', {reportid, pageid, testid});
+
+  ButtonsTest.findOne({'siteID': reportid, 'pageLink': 'https://clas.asu.edu/why'}, function (err, testresults) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          res.render('../views/pages/single-test-report', { testresults, reportid, pageid, testid });
+      }
+  });
+
+  // res.render('../views/pages/single-test-report', {reportid, pageid, testid});
 });
 
 /* GET download pdf single-test-page-report. */

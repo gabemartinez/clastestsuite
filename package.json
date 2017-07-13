@@ -20,7 +20,7 @@
   "homepage": "https://github.com/gabemartinez/clastestsuite#readme",
   "dependencies": {
     "agenda": "^0.9.1",
-    "async": "^2.4.0",
+    "async": "^2.5.0",
     "backstopjs": "^2.6.11",
     "body-parser": "^1.17.1",
     "case": "^1.5.2",
@@ -36,6 +36,7 @@
     "mocha": "^3.2.0",
     "mongoose": "^4.10.4",
     "morgan": "~1.7.0",
+    "osmosis": "^1.1.4",
     "phantom": "^4.0.4",
     "phantomcss": "^1.1.5",
     "request": "^2.81.0",
