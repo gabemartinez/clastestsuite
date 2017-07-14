@@ -32,6 +32,7 @@ var sitemap = require('../middleware/sitemap');
 var gradeUnitName = require('../middleware/gradeUnitName');
 var gradeGlobalASULinks = require('../middleware/gradeGlobalASULinks');
 var gradeButtons = require('../middleware/gradeButtons');
+var gradeOverall = require('../middleware/gradeOverall');
 
 //-- Routes
 
@@ -124,8 +125,9 @@ router.get('/allreports', function(req, res, next) {
 });
 
 /* GET report by id page. */
-router.get('/report/:reportid', function(req, res, next) {
+router.get('/report/:reportid', gradeOverall, function(req, res, next) {
   var reportid = req.params.reportid;
+  var overallgrade = req.overallgrade;
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
@@ -134,7 +136,7 @@ router.get('/report/:reportid', function(req, res, next) {
           res.status(500).send(err)
       } else {
           // res.send(buttonstests);
-          res.render('../views/pages/single-report', { buttonstests, reportid });
+          res.render('../views/pages/single-report', { buttonstests, reportid, overallgrade });
       }
   });
 });

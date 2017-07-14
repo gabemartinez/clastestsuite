@@ -14,22 +14,28 @@ var gradeButtons = function(req, res, next) {
       if (err) {
           res.status(500).send(err)
       } else {
-          var ourButtons = data[0].results[0].buttons;
 
-          // console.log(ourButtons);
+          var ourButtonsData = data[0].results[0].buttons;
+          var ourButtonsPossibleTotal = data[0].results[0].buttons.length*100;
+          var correctAnswers = 0;
 
-          ourButtons.forEach(function(element) {
-            console.log(Case.of(element));
-          })
+          for(var i = 0; i < ourButtonsData.length; ++i){
+              // console.log(ourButtonsData[i]);
+              // console.log(Case.of(ourButtonsData[i]));
+              if((Case.of(ourButtonsData[i]) == 'sentence')||(Case.of(ourButtonsData[i]) == 'header')){
+                correctAnswers++;
+              }
+          }
 
-          // var ourUnitNameCasing = Case.of(ourUnitName);
-          // if (ourUnitNameCasing == 'title'){
-          //   var buttonsgrade = 100;
-          // } else {
-          //   var buttonsgrade = 0;
-          // }
+          var ourButtonsGrade = correctAnswers*100;
+          // console.log(ourButtonsGrade);
+          // console.log(ourButtonsPossibleTotal);
+
+          var buttonsgrade = Math.round((ourButtonsGrade/ourButtonsPossibleTotal)*100);
+          // console.log(buttonsgrade);
+
       }
-      //req.buttonsgrade = buttonsgrade;
+      req.buttonsgrade = buttonsgrade;
       next();
   });
 

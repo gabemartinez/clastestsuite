@@ -8,12 +8,14 @@
 
       <hr />
 
-      <h4>Report ID: <a href="/testrunner/report/<%= buttonstests._id %>"><%= buttonstests._id %></a></h4>
-      <h4>Report Date: <%= buttonstests.created_at %></h4>
-      <h4>Report Main Site URL: <%= buttonstests.url %></h4>
+      <h4>Report ID: <%= reportid %></h4>
+      <h4>Report Date: WIP</h4>
+      <h4>Report Main Site URL: <a href="/testrunner/report/<%= reportid %>">Link</a></h4>
       <h2>Overall Site Grade: Grade %</h2>
 
       <hr />
+
+      <p><%= overallgrade %></p>
 
       <div class="row">
         <div class="col-md-12">

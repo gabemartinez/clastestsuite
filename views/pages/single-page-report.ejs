@@ -11,17 +11,15 @@
       <h4>Page ID: <%= pageid %></h4>
       <h4>Page link: <a href="<%= buttonstests[0].pageLink %>" target="_blank"><%= buttonstests[0].pageLink %></a></h4>
       <h4>Page Title: <%= buttonstests[0].results[0].pageTitle %></h4>
-      <h2>Page Grade: Grade %</h2>
+      <h2>Page Grade: Grade <%= Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) %></h2>
 
       <hr />
 
-      <p><%= buttonstests[0] %></p>
+      <h4><a href="/testrunner/report/<%= reportid %>/<%= pageid %>/unitname">Unit Name Grade</a>: <%= unitnamegrade %></h4>
 
-      <h4>Unit Name Grade: <%= unitnamegrade %></h4>
+      <h4><a href="/testrunner/report/<%= reportid %>/<%= pageid %>/globalasulinks">Global ASU Links Grade</a>: <%= globalasulinksgrade %></h4>
 
-      <h4>Global ASU Links Grade: <%= globalasulinksgrade %></h4>
-
-      <h4>Buttons Grade: </h4>
+      <h4><a href="/testrunner/report/<%= reportid %>/<%= pageid %>/buttons">Buttons Grade</a>: <%= buttonsgrade %></h4>
 
     </div>
 
