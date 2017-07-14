@@ -15,12 +15,13 @@
 
       <hr />
 
-      <p><%= overallgrade %></p>
+      <p><%= %></p>
+      <p><%= overallgradeobject.length %></p>
 
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered">
-          <caption>Total links: <%= buttonstests.length %></caption>
+          <caption>Total links: <%= overallgradeobject.length %></caption>
           <thead>
             <tr>
               <th>Page URL</th>
@@ -29,11 +30,11 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < buttonstests.length; i++) { %>
+            <% for(var i=0; i < overallgradeobject.length; i++) { %>
                <tr>
-                 <td><%= buttonstests[i].pageLink %></td>
-                 <td>Grade %</td>
-                 <td><a href="/testrunner/report/<%= reportid %>/<%= buttonstests[i]._id %>">LINK</a></td>
+                 <td><%= overallgradeobject[i].pagelink %></td>
+                 <td><%= overallgradeobject[i].pagegrade %></td>
+                 <td><a href="/testrunner/report/<%= reportid %>/<%= overallgradeobject[i].pageid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>

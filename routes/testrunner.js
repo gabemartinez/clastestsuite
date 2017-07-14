@@ -127,7 +127,7 @@ router.get('/allreports', function(req, res, next) {
 /* GET report by id page. */
 router.get('/report/:reportid', gradeOverall, function(req, res, next) {
   var reportid = req.params.reportid;
-  var overallgrade = req.overallgrade;
+  var overallgradeobject = req.overallgradeobject;
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
@@ -136,7 +136,7 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
           res.status(500).send(err)
       } else {
           // res.send(buttonstests);
-          res.render('../views/pages/single-report', { buttonstests, reportid, overallgrade });
+          res.render('../views/pages/single-report', { buttonstests, reportid, overallgradeobject });
       }
   });
 });
