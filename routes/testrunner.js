@@ -29,6 +29,9 @@ var test = require("../helpers/test");
 var websparkcheck = require('../middleware/websparkcheck');
 var sitemap = require('../middleware/sitemap');
 // var buttons = require('../middleware/buttons');
+var gradeUnitName = require('../middleware/gradeUnitName');
+var gradeGlobalASULinks = require('../middleware/gradeGlobalASULinks');
+var gradeButtons = require('../middleware/gradeButtons');
 
 //-- Routes
 
@@ -61,6 +64,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
     // console.log(job);
     var thisSiteID = thisSite._id;
     test(thisSiteID);
+    done();
   });
 
   // agenda.define('check buttons', function(job, done) {
@@ -123,18 +127,19 @@ router.get('/allreports', function(req, res, next) {
 router.get('/report/:reportid', function(req, res, next) {
   var reportid = req.params.reportid;
   // res.json({reportid});
-  Site.find({"_id": reportid}, function (err, site) {
+
+  // If query IS passed into .find(), filters by the query parameters
+  ButtonsTest.find({"siteID": reportid}, function (err, buttonstests) {
       if (err) {
           res.status(500).send(err)
       } else {
-          // send the list of all sites in database with get id
-          // console.log(site);
-          res.render('../views/pages/single-report', { site, reportid });
+          // res.send(buttonstests);
+          res.render('../views/pages/single-report', { buttonstests, reportid });
       }
   });
 });
 
-/* GET report by id page. */
+/* GET report by id page. sortable */
 router.get('/report-sortable/:reportid', function(req, res, next) {
   var reportid = req.params.reportid;
   // res.json({reportid});
@@ -173,10 +178,21 @@ router.get('/savesitereport/:reportid', function(req, res, next) {
 });
 
 /* GET page specific report. */
-router.get('/report/:reportid/:pageid', function(req, res, next) {
+router.get('/report/:reportid/:pageid', gradeUnitName, gradeGlobalASULinks, gradeButtons, function(req, res, next) {
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
-  res.render('../views/pages/single-page-report', {reportid, pageid});
+  var unitnamegrade = req.unitnamegrade;
+  var globalasulinksgrade = req.globalasulinksgrade;
+  var buttonsgrade = req.buttonsgrade;
+
+  // If query IS passed into .find(), filters by the query parameters
+  ButtonsTest.find({"_id": pageid, "siteID": reportid}, function (err, buttonstests) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          res.render('../views/pages/single-page-report', {reportid, pageid, buttonstests, unitnamegrade, globalasulinksgrade, buttonsgrade});
+      }
+  });
 });
 
 /* GET download pdf single-page-report. */

@@ -36,8 +36,9 @@ module.exports = function(siteid) {
             'buttons': ['.btn'],
             'globalasulinks': ['#asu_universal_nav li > a']
         })
+        .delay(5)
         .data(function(ourData) {
-            console.log(ourData);
+            // console.log(ourData);
 
             //
             var testButtonsData = new ButtonsTest({ siteID: siteid, pageLink: element, results: ourData });

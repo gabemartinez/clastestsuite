@@ -9,11 +9,19 @@
 
       <h4>Report ID: <a href="/testrunner/report/<%= reportid %>"><%= reportid %></a></h4>
       <h4>Page ID: <%= pageid %></h4>
+      <h4>Page link: <a href="<%= buttonstests[0].pageLink %>" target="_blank"><%= buttonstests[0].pageLink %></a></h4>
+      <h4>Page Title: <%= buttonstests[0].results[0].pageTitle %></h4>
       <h2>Page Grade: Grade %</h2>
 
       <hr />
 
-      <p>Tests and results all listed here.</p>
+      <p><%= buttonstests[0] %></p>
+
+      <h4>Unit Name Grade: <%= unitnamegrade %></h4>
+
+      <h4>Global ASU Links Grade: <%= globalasulinksgrade %></h4>
+
+      <h4>Buttons Grade: </h4>
 
     </div>
 

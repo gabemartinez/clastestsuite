@@ -8,9 +8,9 @@
 
       <hr />
 
-      <h4>Report ID: <a href="/testrunner/report/<%= site[0]._id %>"><%= site[0]._id %></a></h4>
-      <h4>Report Date: <%= site[0].created_at %></h4>
-      <h4>Report Main Site URL: <%= site[0].url %></h4>
+      <h4>Report ID: <a href="/testrunner/report/<%= buttonstests._id %>"><%= buttonstests._id %></a></h4>
+      <h4>Report Date: <%= buttonstests.created_at %></h4>
+      <h4>Report Main Site URL: <%= buttonstests.url %></h4>
       <h2>Overall Site Grade: Grade %</h2>
 
       <hr />
@@ -18,7 +18,7 @@
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered">
-          <caption>Total links: <%= site[0].links.length %></caption>
+          <caption>Total links: <%= buttonstests.length %></caption>
           <thead>
             <tr>
               <th>Page URL</th>
@@ -27,11 +27,11 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < site[0].links.length; i++) { %>
+            <% for(var i=0; i < buttonstests.length; i++) { %>
                <tr>
-                 <td><%= site[0].links[i] %></td>
+                 <td><%= buttonstests[i].pageLink %></td>
                  <td>Grade %</td>
-                 <td><a href="<%= site[0]._id %>/<%= i %>">LINK</a></td>
+                 <td><a href="/testrunner/report/<%= reportid %>/<%= buttonstests[i]._id %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>
