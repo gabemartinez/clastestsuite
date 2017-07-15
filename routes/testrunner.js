@@ -142,16 +142,18 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
 });
 
 /* GET report by id page. sortable */
-router.get('/report-sortable/:reportid', function(req, res, next) {
+router.get('/report-sortable/:reportid', gradeOverall, function(req, res, next) {
   var reportid = req.params.reportid;
+  var overallgradeobject = req.overallgradeobject;
   // res.json({reportid});
-  Site.find({"_id": reportid}, function (err, site) {
+
+  // If query IS passed into .find(), filters by the query parameters
+  ButtonsTest.find({"siteID": reportid}, function (err, buttonstests) {
       if (err) {
           res.status(500).send(err)
       } else {
-          // send the list of all sites in database with get id
-          // console.log(site);
-          res.render('../views/pages/single-report-sort', { site, reportid });
+          // res.send(buttonstests);
+          res.render('../views/pages/single-report-sort', { buttonstests, reportid, overallgradeobject });
       }
   });
 });

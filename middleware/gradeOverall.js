@@ -80,7 +80,10 @@ var gradeOverall = function(req, res, next) {
 
       }
 
-      // console.log(overallgradeobject);
+      for(var i = 0; i < overallgradeobject.length; ++i){
+            console.log(overallgradeobject[i].pagegrade);
+      }
+
       req.overallgradeobject = overallgradeobject;
       next();
 
