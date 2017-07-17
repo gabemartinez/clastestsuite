@@ -1,0 +1,22 @@
+<% include ../partials/testrunner-head %>
+
+    <div class="container">
+
+      <h1>Global ASU Links test report.</h1>
+      <p><a href="/testrunner/savesitereport/#/##">Save pdf.</a></p>
+
+      <hr />
+
+      <h4>Report ID: <a href="/testrunner/report/<%= data.siteID %>"><%= data.siteID %></a></h4>
+      <h4>Page ID: <%= data._id %></h4>
+      <h4>Page Link: <a href="<%= data.pageLink %>" target="_blank"><%= data.pageLink %></a></h4>
+      <h4>Page Title: <%= data.results[0].pageTitle %></h4>
+      <h2>Grade: <%= globalasulinksgrade %></h2>
+
+      <hr />
+
+      <p>Global ASU Links: <%= data.results[0].globalasulinks %></p>
+
+    </div>
+
+<% include ../partials/testrunner-footer %>

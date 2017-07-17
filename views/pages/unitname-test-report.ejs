@@ -1,0 +1,21 @@
+<% include ../partials/testrunner-head %>
+
+    <div class="container">
+
+      <h1>Unit Name test report.</h1>
+
+      <hr />
+
+      <h4>Report ID: <a href="/testrunner/report/<%= data.siteID %>"><%= data.siteID %></a></h4>
+      <h4>Page ID: <%= data._id %></h4>
+      <h4>Page Link: <a href="<%= data.pageLink %>" target="_blank"><%= data.pageLink %></a></h4>
+      <h4>Page Title: <%= data.results[0].pageTitle %></h4>
+      <h2>Grade: <%= unitnamegrade %></h2>
+
+      <hr />
+
+      <p>Unit Name: <%= data.results[0].unitName %></p>
+
+    </div>
+
+<% include ../partials/testrunner-footer %>

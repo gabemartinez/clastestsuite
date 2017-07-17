@@ -18,17 +18,12 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //-- Helpers
 
-// var formatter = require("../helpers/formatString");
-// var buttons = require("../helpers/buttons");
 var test = require("../helpers/test");
-// var unitnames = require("../helpers/unitnames");
-// var globalasulinks = require("../helpers/globalasulinks");
 
 //-- Middleware
 
 var websparkcheck = require('../middleware/websparkcheck');
 var sitemap = require('../middleware/sitemap');
-// var buttons = require('../middleware/buttons');
 var gradeUnitName = require('../middleware/gradeUnitName');
 var gradeGlobalASULinks = require('../middleware/gradeGlobalASULinks');
 var gradeButtons = require('../middleware/gradeButtons');
@@ -57,7 +52,6 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
 
   // agenda process
-  // var mongoConnectionString = mongoconnection;
   var agenda = new Agenda({db: {address: mongoconnection}});
 
   agenda.define('check dom', function(job, done) {
@@ -113,8 +107,6 @@ router.get('/allreports', function(req, res, next) {
   // res.json('all reports');
   Site.find(function (err, sites) {
       if (err) {
-          // Note that this error doesn't mean nothing was found,
-          // it means the database had an error while searching, hence the 500 status
           res.status(500).send(err)
       } else {
           // send the list of all sites
@@ -136,7 +128,9 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
           res.status(500).send(err)
       } else {
           // res.send(buttonstests);
-          res.render('../views/pages/single-report', { buttonstests, reportid, overallgradeobject });
+          Site.find({"_id": reportid}, function (err, thissite) {
+            res.render('../views/pages/single-report', { buttonstests, reportid, thissite, overallgradeobject });
+          } );
       }
   });
 });
@@ -153,7 +147,9 @@ router.get('/report-sortable/:reportid', gradeOverall, function(req, res, next) 
           res.status(500).send(err)
       } else {
           // res.send(buttonstests);
-          res.render('../views/pages/single-report-sort', { buttonstests, reportid, overallgradeobject });
+          Site.find({"_id": reportid}, function (err, thissite) {
+            res.render('../views/pages/single-report-sort', { buttonstests, reportid, thissite, overallgradeobject });
+          } );
       }
   });
 });
@@ -223,21 +219,53 @@ router.get('/savesitereport/:reportid/:pageid', function(req, res, next) {
 
 });
 
-/* GET test specific report from page. */
-router.get('/report/:reportid/:pageid/:testid', function(req, res, next) {
+/* GET Unit Name Test specific report from page. */
+router.get('/unitnamereport/:reportid/:pageid/', gradeUnitName, function(req, res, next) {
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
-  var testid = req.params.testid;
+  var unitnamegrade = req.unitnamegrade;
 
-  ButtonsTest.findOne({'siteID': reportid, 'pageLink': 'https://clas.asu.edu/why'}, function (err, testresults) {
+  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
-          res.render('../views/pages/single-test-report', { testresults, reportid, pageid, testid });
+          res.render('../views/pages/unitname-test-report', { data, unitnamegrade });
       }
   });
 
-  // res.render('../views/pages/single-test-report', {reportid, pageid, testid});
+});
+
+/* GET Global ASU Links Test specific report from page. */
+router.get('/globalasulinksreport/:reportid/:pageid/', gradeGlobalASULinks, function(req, res, next) {
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+  var globalasulinksgrade = req.globalasulinksgrade;
+
+  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          res.render('../views/pages/globalasulinks-test-report', { data, globalasulinksgrade });
+      }
+  });
+
+});
+
+/* GET Buttons Report Test specific report from page. */
+router.get('/buttonsreport/:reportid/:pageid/', gradeButtons, function(req, res, next) {
+  var reportid = req.params.reportid;
+  var pageid = req.params.pageid;
+  var buttonsgrade = req.buttonsgrade;
+  var buttonswithgrades = req.buttonswithgrades;
+
+  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
+      if (err) {
+          res.status(500).send(err)
+      } else {
+          res.render('../views/pages/buttons-test-report', { data, buttonsgrade, buttonswithgrades });
+      }
+  });
+
 });
 
 /* GET download pdf single-test-page-report. */

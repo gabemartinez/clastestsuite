@@ -19,12 +19,32 @@ var gradeButtons = function(req, res, next) {
           var ourButtonsPossibleTotal = data[0].results[0].buttons.length*100;
           var correctAnswers = 0;
 
+          var buttonswithgrades = [];
+
           for(var i = 0; i < ourButtonsData.length; ++i){
               // console.log(ourButtonsData[i]);
               // console.log(Case.of(ourButtonsData[i]));
               if((Case.of(ourButtonsData[i]) == 'sentence')||(Case.of(ourButtonsData[i]) == 'header')){
                 correctAnswers++;
               }
+
+              var buttontext = ourButtonsData[i];
+              var casing = Case.of(ourButtonsData[i]);
+
+              if ( (casing == "sentence") || (casing == "header") ){
+                var grade = 100;
+              } else {
+                var grade = 0;
+              }
+
+              var singlebuttondata = {
+                buttontext: buttontext,
+                casing: casing,
+                grade: grade
+              };
+
+              buttonswithgrades.push(singlebuttondata);
+
           }
 
           var ourButtonsGrade = correctAnswers*100;
@@ -36,6 +56,7 @@ var gradeButtons = function(req, res, next) {
 
       }
       req.buttonsgrade = buttonsgrade;
+      req.buttonswithgrades = buttonswithgrades;
       next();
   });
 

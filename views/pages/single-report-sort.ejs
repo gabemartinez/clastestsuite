@@ -14,8 +14,8 @@
       <hr />
 
       <h4>Report ID: <%= reportid %></h4>
-      <h4>Report Date: WIP</h4>
-      <h4>Report Main Site URL: WIP</h4>
+      <h4>Report Date: <%= thissite[0].created_at %></h4>
+      <h4>Report Main Site URL: <a href="<%= thissite[0].url %>" target="_blank"><%= thissite[0].url %></a></h4>
       <h2>Overall Site Grade: Grade %</h2>
 
       <hr />

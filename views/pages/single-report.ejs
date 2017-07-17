@@ -3,19 +3,16 @@
     <div class="container">
 
       <h1>Site report.</h1>
-      <p><a href="/testrunner/savesitereport/<%= reportid %>">Save pdf.</a></p>
       <p><a href="/testrunner/report-sortable/<%= reportid %>">Sortable.</a></p>
 
       <hr />
 
       <h4>Report ID: <%= reportid %></h4>
-      <h4>Report Date: WIP</h4>
-      <h4>Report Main Site URL: WIP</h4>
+      <h4>Report Date: <%= thissite[0].created_at %></h4>
+      <h4>Report Main Site URL: <a href="<%= thissite[0].url %>" target="_blank"><%= thissite[0].url %></a></h4>
       <h2>Overall Site Grade: Grade %</h2>
 
       <hr />
-
-      <p><%= overallgradeobject %></p>
 
       <div class="row">
         <div class="col-md-12">

@@ -1,0 +1,43 @@
+<% include ../partials/testrunner-head %>
+
+    <div class="container">
+
+      <h1>Buttons test report.</h1>
+
+      <hr />
+
+      <h4>Report ID: <a href="/testrunner/report/<%= data.siteID %>"><%= data.siteID %></a></h4>
+      <h4>Page ID: <%= data._id %></h4>
+      <h4>Page Link: <a href="<%= data.pageLink %>" target="_blank"><%= data.pageLink %></a></h4>
+      <h4>Page Title: <%= data.results[0].pageTitle %></h4>
+      <h2>Grade: <%= buttonsgrade %></h2>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+        <table class="table table-hover">
+          <caption>Buttons on page: <%= buttonswithgrades.length %></caption>
+          <thead>
+            <tr>
+              <th>Button Text</th>
+              <th>Casing Type</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < buttonswithgrades.length; i++) { %>
+               <tr>
+                 <td><%= buttonswithgrades[i].buttontext %></td>
+                 <td><%= buttonswithgrades[i].casing %></td>
+                 <td><%= buttonswithgrades[i].grade %></td>
+               </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      </div>
+
+    </div>
+
+<% include ../partials/testrunner-footer %>
