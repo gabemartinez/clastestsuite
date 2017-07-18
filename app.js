@@ -6,13 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 // routes
-var index = require('./routes/index');
-var buttons = require('./routes/buttons');
-var unitname = require('./routes/unitname');
-var faviconroute = require('./routes/favicon');
-var sitemap = require('./routes/sitemap');
-var globalasulinks = require('./routes/globalasulinks');
-var runall = require('./routes/runall');
+// var index = require('./routes/index');
+// var buttons = require('./routes/buttons');
+// var unitname = require('./routes/unitname');
+// var faviconroute = require('./routes/favicon');
+// var sitemap = require('./routes/sitemap');
+// var globalasulinks = require('./routes/globalasulinks');
+// var runall = require('./routes/runall');
 var testrunner = require('./routes/testrunner');
 
 var app = express();
@@ -32,13 +32,13 @@ app.use("/baselineImages", express.static(__dirname + '/tests/baselineImages'));
 app.use("/downloadedImages", express.static(__dirname + '/tests/downloadedImages'));
 app.use("/resultImages", express.static(__dirname + '/tests/resultImages'));
 
-app.use('/', index);
-app.use('/buttons', buttons);
-app.use('/unitname', unitname);
-app.use('/favicon', faviconroute);
-app.use('/sitemap', sitemap);
-app.use('/globalasulinks', globalasulinks);
-app.use('/runall', runall);
+// app.use('/', index);
+// app.use('/buttons', buttons);
+// app.use('/unitname', unitname);
+// app.use('/favicon', faviconroute);
+// app.use('/sitemap', sitemap);
+// app.use('/globalasulinks', globalasulinks);
+// app.use('/runall', runall);
 app.use('/testrunner', testrunner);
 
 // catch 404 and forward to error handler
