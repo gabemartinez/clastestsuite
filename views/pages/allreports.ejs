@@ -12,10 +12,12 @@
 
       <hr />
 
+      <p><%= allsitegradeobject %></p>
+
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered" id="allreportstable">
-          <caption>Total reports: <%= sites.length %></caption>
+          <caption>Total reports: <%= allsitegradeobject.length %></caption>
           <thead>
             <tr>
               <th>Report Site URL</th>
@@ -25,12 +27,12 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < sites.length; i++) { %>
+            <% for(var i=0; i < allsitegradeobject.length; i++) { %>
                <tr>
-                 <td><%= sites[i].url %></td>
-                 <td><%= sites[i].created_at %></td>
-                 <td>Grade %</td>
-                 <td><a href="report/<%= sites[i]._id %>">LINK</a></td>
+                 <td><%= allsitegradeobject[i].url %></td>
+                 <td><%= allsitegradeobject[i].reportdate %></td>
+                 <td><%= allsitegradeobject[i].thisgrade %></td>
+                 <td><a href="report/<%= allsitegradeobject[i].reportid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>

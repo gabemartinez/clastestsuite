@@ -28,6 +28,7 @@ var gradeUnitName = require('../middleware/gradeUnitName');
 var gradeGlobalASULinks = require('../middleware/gradeGlobalASULinks');
 var gradeButtons = require('../middleware/gradeButtons');
 var gradeOverall = require('../middleware/gradeOverall');
+var allSiteGrades = require('../middleware/allSiteGrades');
 
 //-- Routes
 
@@ -103,17 +104,12 @@ router.get('/notwebspark', function(req, res, next) {
 });
 
 /* GET allreports page. */
-router.get('/allreports', function(req, res, next) {
-  // res.json('all reports');
-  Site.find(function (err, sites) {
-      if (err) {
-          res.status(500).send(err)
-      } else {
-          // send the list of all sites
-          // res.json(sites);
-          res.render('../views/pages/allreports', { sites });
-      }
-  });
+router.get('/allreports', allSiteGrades, function(req, res, next) {
+  var allsitegradeobject = req.allsitegradeobject;
+
+  // res.send(allsitegradeobject);
+  res.render('../views/pages/allreports', { allsitegradeobject });
+
 });
 
 /* GET report by id page. */
