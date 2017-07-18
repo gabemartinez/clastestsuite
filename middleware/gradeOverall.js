@@ -7,6 +7,7 @@ var gradeOverall = function(req, res, next) {
   var ButtonsTest = require('../models/ButtonsTest');
 
   var Case = require('case');
+  var isNumber = require('is-number');
 
   var unitnameid = req.params.reportid;
 
@@ -31,7 +32,6 @@ var gradeOverall = function(req, res, next) {
             } else {
               var unitnamegrade = 0;
             }
-
             // console.log(unitnamegrade);
             // unit name grade
 
@@ -44,7 +44,6 @@ var gradeOverall = function(req, res, next) {
             ourLinksObject = JSON.stringify(ourGlobalASULinks);
 
             var globalasulinksgrade = baselineLinksObject === ourLinksObject ? 100 : 0;
-
             // console.log(globalasulinksgrade);
             // global asu links grade
 
@@ -62,11 +61,21 @@ var gradeOverall = function(req, res, next) {
             var ourButtonsGrade = correctAnswers*100;
 
             var buttonsgrade = Math.round((ourButtonsGrade/ourButtonsPossibleTotal)*100);
+            if (isNumber(buttonsgrade)){
+              var buttonsgrade = Math.round((ourButtonsGrade/ourButtonsPossibleTotal)*100);
+            } else {
+              var buttonsgrade = 0;
+            }
             // console.log(buttonsgrade);
             // buttons grade
 
-            var pagegrade = Math.round(((unitnamegrade + globalasulinksgrade + buttonsgrade) / 300)*100);
             // console.log(pagegrade);
+            var pagegrade = Math.round(((unitnamegrade + globalasulinksgrade + buttonsgrade) / 300)*100);
+            if (isNumber(pagegrade)){
+              var pagegrade = Math.round(((unitnamegrade + globalasulinksgrade + buttonsgrade) / 300)*100);
+            } else {
+              var pagegrade = 0;
+            }
 
             var singleoverallgrade = {
               pagelink: element.pageLink,
@@ -80,10 +89,17 @@ var gradeOverall = function(req, res, next) {
 
       }
 
+      // console.log(overallgradeobject[0].pagegrade);
+      var sum = 0;
       for(var i = 0; i < overallgradeobject.length; ++i){
-            console.log(overallgradeobject[i].pagegrade);
+            // console.log(overallgradeobject[i].pagegrade);
+            sum += overallgradeobject[i].pagegrade;
       }
+      // console.log(sum);
+      // console.log(sum/overallgradeobject.length);
+      var overallsitegrade = Math.round(sum/overallgradeobject.length);
 
+      req.overallsitegrade = overallsitegrade;
       req.overallgradeobject = overallgradeobject;
       next();
 

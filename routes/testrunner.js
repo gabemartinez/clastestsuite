@@ -120,6 +120,7 @@ router.get('/allreports', function(req, res, next) {
 router.get('/report/:reportid', gradeOverall, function(req, res, next) {
   var reportid = req.params.reportid;
   var overallgradeobject = req.overallgradeobject;
+  var overallsitegrade = req.overallsitegrade;
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
@@ -129,7 +130,7 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
       } else {
           // res.send(buttonstests);
           Site.find({"_id": reportid}, function (err, thissite) {
-            res.render('../views/pages/single-report', { buttonstests, reportid, thissite, overallgradeobject });
+            res.render('../views/pages/single-report', { buttonstests, reportid, thissite, overallgradeobject, overallsitegrade });
           } );
       }
   });
@@ -139,6 +140,7 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
 router.get('/report-sortable/:reportid', gradeOverall, function(req, res, next) {
   var reportid = req.params.reportid;
   var overallgradeobject = req.overallgradeobject;
+  var overallsitegrade = req.overallsitegrade;
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
@@ -148,7 +150,7 @@ router.get('/report-sortable/:reportid', gradeOverall, function(req, res, next) 
       } else {
           // res.send(buttonstests);
           Site.find({"_id": reportid}, function (err, thissite) {
-            res.render('../views/pages/single-report-sort', { buttonstests, reportid, thissite, overallgradeobject });
+            res.render('../views/pages/single-report-sort', { buttonstests, reportid, thissite, overallgradeobject, overallsitegrade });
           } );
       }
   });
@@ -224,12 +226,13 @@ router.get('/unitnamereport/:reportid/:pageid/', gradeUnitName, function(req, re
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
   var unitnamegrade = req.unitnamegrade;
+  var unitnamewithgrade = req.unitnamewithgrade;
 
   ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
-          res.render('../views/pages/unitname-test-report', { data, unitnamegrade });
+          res.render('../views/pages/unitname-test-report', { data, unitnamegrade, unitnamewithgrade });
       }
   });
 
@@ -240,12 +243,13 @@ router.get('/globalasulinksreport/:reportid/:pageid/', gradeGlobalASULinks, func
   var reportid = req.params.reportid;
   var pageid = req.params.pageid;
   var globalasulinksgrade = req.globalasulinksgrade;
+  var baselineLinksObject = JSON.parse(req.baselineLinksObject);
 
   ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
-          res.render('../views/pages/globalasulinks-test-report', { data, globalasulinksgrade });
+          res.render('../views/pages/globalasulinks-test-report', { data, globalasulinksgrade, baselineLinksObject });
       }
   });
 

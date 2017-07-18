@@ -8,6 +8,7 @@ var gradeButtons = function(req, res, next) {
 
   var unitnameid = req.params.pageid;
   var Case = require('case');
+  var isNumber = require('is-number');
 
   // If query IS passed into .find(), filters by the query parameters
   ButtonsTest.find({"_id": unitnameid}, function (err, data) {
@@ -52,6 +53,11 @@ var gradeButtons = function(req, res, next) {
           // console.log(ourButtonsPossibleTotal);
 
           var buttonsgrade = Math.round((ourButtonsGrade/ourButtonsPossibleTotal)*100);
+          if (isNumber(buttonsgrade)){
+            var buttonsgrade = Math.round((ourButtonsGrade/ourButtonsPossibleTotal)*100);
+          } else {
+            var buttonsgrade = 0;
+          }
           // console.log(buttonsgrade);
 
       }

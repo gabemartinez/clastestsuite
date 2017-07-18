@@ -79,6 +79,7 @@ var baselineLinks = [ 'ASU Home', 'News/Events', 'Academics', 'Research', 'Athle
 
       }
       req.globalasulinksgrade = globalasulinksgrade;
+      req.baselineLinksObject = baselineLinksObject;
       next();
   });
 

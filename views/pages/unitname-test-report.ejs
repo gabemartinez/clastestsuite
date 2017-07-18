@@ -14,7 +14,28 @@
 
       <hr />
 
-      <p>Unit Name: <%= data.results[0].unitName %></p>
+      <div class="row">
+        <div class="col-md-12">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Unit Name Text</th>
+              <th>Casing Type</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < unitnamewithgrade.length; i++) { %>
+               <tr>
+                 <td><%= unitnamewithgrade[i].unitnametext %></td>
+                 <td><%= unitnamewithgrade[i].casing %></td>
+                 <td><%= unitnamewithgrade[i].grade %></td>
+               </tr>
+            <% } %>
+          </tbody>
+        </table>
+      </div>
+      </div>
 
     </div>
 

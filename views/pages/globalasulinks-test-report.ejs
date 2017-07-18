@@ -3,7 +3,6 @@
     <div class="container">
 
       <h1>Global ASU Links test report.</h1>
-      <p><a href="/testrunner/savesitereport/#/##">Save pdf.</a></p>
 
       <hr />
 
@@ -15,7 +14,9 @@
 
       <hr />
 
-      <p>Global ASU Links: <%= data.results[0].globalasulinks %></p>
+      <p>Global ASU Links on page: <%= data.results[0].globalasulinks %></p>
+
+      <p>Global ASU Links expected: <%= baselineLinksObject %></p>
 
     </div>
 
