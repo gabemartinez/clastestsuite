@@ -12,8 +12,6 @@
 
       <hr />
 
-      <p><%= allsitegradeobject %></p>
-
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered" id="allreportstable">
@@ -22,7 +20,6 @@
             <tr>
               <th>Report Site URL</th>
               <th>Report Date</th>
-              <th>Report Grade</th>
               <th>Report Link</th>
             </tr>
           </thead>
@@ -31,8 +28,7 @@
                <tr>
                  <td><%= allsitegradeobject[i].url %></td>
                  <td><%= allsitegradeobject[i].reportdate %></td>
-                 <td><%= allsitegradeobject[i].thisgrade %></td>
-                 <td><a href="report/<%= allsitegradeobject[i].reportid %>">LINK</a></td>
+                 <td><a href="report/<%= allsitegradeobject[i].siteid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>

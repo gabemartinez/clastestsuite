@@ -29,6 +29,7 @@ var gradeGlobalASULinks = require('../middleware/gradeGlobalASULinks');
 var gradeButtons = require('../middleware/gradeButtons');
 var gradeOverall = require('../middleware/gradeOverall');
 var allSiteGrades = require('../middleware/allSiteGrades');
+var gradeSitesOverall = require('../middleware/gradeSitesOverall');
 
 //-- Routes
 
@@ -106,6 +107,9 @@ router.get('/notwebspark', function(req, res, next) {
 /* GET allreports page. */
 router.get('/allreports', allSiteGrades, function(req, res, next) {
   var allsitegradeobject = req.allsitegradeobject;
+  // var allsitegradeshere = req.allsitegradeshere;
+  console.log(allsitegradeobject);
+  // console.log(allsitegradeobject);
 
   // res.send(allsitegradeobject);
   res.render('../views/pages/allreports', { allsitegradeobject });
