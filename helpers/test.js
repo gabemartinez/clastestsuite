@@ -5,15 +5,9 @@ mongoose.connect(mongoconnection);
 var Site = require('../models/Site');
 var ButtonsTest = require('../models/ButtonsTest');
 
-// var cheerio = require('cheerio');
-// var Case = require('case');
-// var request = require('request-promise');
 var osmosis = require('osmosis');
 
-// helpers/buttons.js
 module.exports = function(siteid) {
-  // return 'this site id' + siteid;
-  // console.log(siteid);
 
   Site.findById(siteid, function(err, site) {
 

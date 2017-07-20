@@ -33,12 +33,12 @@ var gradeSitesOverall = require('../middleware/gradeSitesOverall');
 
 //-- Routes
 
-/* GET testrunner page. */
+/* GET index page. */
 router.get('/', function(req, res, next) {
   res.render('../views/pages/testrunner');
 });
 
-/* POST testrunner page. */
+/* POST index page. */
 router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, next) {
 
   var site = req.body.site;
