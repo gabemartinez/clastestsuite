@@ -1,24 +1,23 @@
-<% include ../partials/testrunner-head %>
+<% include ../partials/header %>
 
     <div class="container">
 
       <h1>Site report.</h1>
-      <p><a href="/testrunner/savesitereport/<%= reportid %>">Save pdf.</a></p>
-      <p><a href="/testrunner/report-sortable/<%= reportid %>">Sortable.</a></p>
+      <p><a href="/report-sortable/<%= reportid %>">Sortable.</a></p>
 
       <hr />
 
-      <h4>Report ID: <a href="/testrunner/report/<%= site[0]._id %>"><%= site[0]._id %></a></h4>
-      <h4>Report Date: <%= site[0].created_at %></h4>
-      <h4>Report Main Site URL: <%= site[0].url %></h4>
-      <h2>Overall Site Grade: Grade %</h2>
+      <h4>Report ID: <%= reportid %></h4>
+      <h4>Report Date: <%= thissite[0].created_at %></h4>
+      <h4>Report Main Site URL: <a href="<%= thissite[0].url %>" target="_blank"><%= thissite[0].url %></a></h4>
+      <h2>Overall Site Grade: <%= overallsitegrade %></h2>
 
       <hr />
 
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered">
-          <caption>Total links: <%= site[0].links.length %></caption>
+          <caption>Total links: <%= overallgradeobject.length %></caption>
           <thead>
             <tr>
               <th>Page URL</th>
@@ -27,11 +26,11 @@
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < site[0].links.length; i++) { %>
+            <% for(var i=0; i < overallgradeobject.length; i++) { %>
                <tr>
-                 <td><%= site[0].links[i] %></td>
-                 <td>Grade %</td>
-                 <td><a href="<%= site[0]._id %>/<%= i %>">LINK</a></td>
+                 <td><%= overallgradeobject[i].pagelink %></td>
+                 <td><%= overallgradeobject[i].pagegrade %></td>
+                 <td><a href="/report/<%= reportid %>/<%= overallgradeobject[i].pageid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>
@@ -41,4 +40,4 @@
 
     </div>
 
-<% include ../partials/testrunner-footer %>
+<% include ../partials/footer %>

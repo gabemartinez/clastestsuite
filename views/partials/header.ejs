@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= title %> - CLAS Test Suite</title>
+    <title>CLAS Test Suite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -16,28 +16,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
-    <script type="text/javascript">
-    function genPDF() {
-
-    	var doc = new jsPDF();
-
-        doc.setFontSize(10);      
-
-        var specialElementHandlers = {
-            '#hidediv' : function(element,render) {return true;}
-        };
-
-        doc.fromHTML($('#sitereportcontainer').get(0), 20,20,{
-                     'width':1200,
-            		'elementHandlers': specialElementHandlers
-        });
-
-    	doc.save(Date.now()+'_SiteReport.pdf');
-
-    }
-    </script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
 
   </head>
   <body>
@@ -54,18 +35,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">CLAS - TS</a>
+          <a class="navbar-brand" href="/">Home</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="/sitemap">Sitemap</a></li>
-            <li><a href="/buttons">Buttons</a></li>
-            <li><a href="/unitname">Unit Name</a></li>
-            <li><a href="/favicon">Favicon</a></li>
-            <li><a href="/globalasulinks">Global ASU Links</a></li>
-            <li><a href="/runall">Run All</a></li>
+            <li><a href="/allreports">All Reports</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

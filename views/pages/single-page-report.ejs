@@ -1,20 +1,25 @@
-<% include ../partials/testrunner-head %>
+<% include ../partials/header %>
 
     <div class="container">
 
       <h1>Page report.</h1>
-      <p><a href="/testrunner/savesitereport/<%= reportid %>/<%= pageid %>">Save pdf.</a></p>
 
       <hr />
 
-      <h4>Report ID: <a href="/testrunner/report/<%= reportid %>"><%= reportid %></a></h4>
+      <h4>Report ID: <a href="/report/<%= reportid %>"><%= reportid %></a></h4>
       <h4>Page ID: <%= pageid %></h4>
-      <h2>Page Grade: Grade %</h2>
+      <h4>Page Link: <a href="<%= buttonstests[0].pageLink %>" target="_blank"><%= buttonstests[0].pageLink %></a></h4>
+      <h4>Page Title: <%= buttonstests[0].results[0].pageTitle %></h4>
+      <h2>Page Grade: <%= Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) %></h2>
 
       <hr />
 
-      <p>Tests and results all listed here.</p>
+      <h4><a href="/unitnamereport/<%= reportid %>/<%= pageid %>">Unit Name Grade</a>: <%= unitnamegrade %></h4>
+
+      <h4><a href="/globalasulinksreport/<%= reportid %>/<%= pageid %>">Global ASU Links Grade</a>: <%= globalasulinksgrade %></h4>
+
+      <h4><a href="/buttonsreport/<%= reportid %>/<%= pageid %>">Buttons Grade</a>: <%= buttonsgrade %></h4>
 
     </div>
 
-<% include ../partials/testrunner-footer %>
+<% include ../partials/footer %>

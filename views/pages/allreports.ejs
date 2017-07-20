@@ -1,4 +1,4 @@
-<% include ../partials/testrunner-head %>
+<% include ../partials/header %>
 
 <script type="text/javascript">
   $(document).ready(function() {
@@ -15,22 +15,20 @@
       <div class="row">
         <div class="col-md-12">
         <table class="table table-striped table-bordered" id="allreportstable">
-          <caption>Total reports: <%= sites.length %></caption>
+          <caption>Total reports: <%= allsitegradeobject.length %></caption>
           <thead>
             <tr>
               <th>Report Site URL</th>
               <th>Report Date</th>
-              <th>Report Grade</th>
               <th>Report Link</th>
             </tr>
           </thead>
           <tbody>
-            <% for(var i=0; i < sites.length; i++) { %>
+            <% for(var i=0; i < allsitegradeobject.length; i++) { %>
                <tr>
-                 <td><%= sites[i].url %></td>
-                 <td><%= sites[i].created_at %></td>
-                 <td>Grade %</td>
-                 <td><a href="report/<%= sites[i]._id %>">LINK</a></td>
+                 <td><%= allsitegradeobject[i].url %></td>
+                 <td><%= allsitegradeobject[i].reportdate %></td>
+                 <td><a href="report/<%= allsitegradeobject[i].siteid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>
@@ -40,4 +38,4 @@
 
     </div>
 
-<% include ../partials/testrunner-footer %>
+<% include ../partials/footer %>
