@@ -31,7 +31,7 @@ module.exports = function(siteid) {
             'buttons': ['.btn'],
             'globalasulinks': ['#asu_universal_nav li > a']
         })
-        .delay(100)
+        .delay(200)
         .data(function(ourData) {
             // console.log(ourData);
 
