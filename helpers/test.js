@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
 mongoose.connect(mongoconnection);
+
 var Site = require('../models/Site');
 var ButtonsTest = require('../models/ButtonsTest');
 

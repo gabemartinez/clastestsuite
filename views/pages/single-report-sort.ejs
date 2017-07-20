@@ -9,7 +9,7 @@
     <div class="container">
 
       <h1>Site report.</h1>
-      <p><a href="/testrunner/report/<%= reportid %>">Non-sortable.</a></p>
+      <p><a href="/report/<%= reportid %>">Non-sortable.</a></p>
 
       <hr />
 
@@ -36,7 +36,7 @@
                <tr>
                  <td><%= overallgradeobject[i].pagelink %></td>
                  <td><%= overallgradeobject[i].pagegrade %></td>
-                 <td><a href="/testrunner/report/<%= reportid %>/<%= overallgradeobject[i].pageid %>">LINK</a></td>
+                 <td><a href="/report/<%= reportid %>/<%= overallgradeobject[i].pageid %>">LINK</a></td>
                </tr>
             <% } %>
           </tbody>
