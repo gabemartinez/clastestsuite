@@ -4,14 +4,14 @@ var gradeButtons = function(req, res, next) {
   var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
   mongoose.createConnection(mongoconnection);
 
-  var ButtonsTest = require('../models/ButtonsTest');
+  var Test = require('../models/Test');
 
   var unitnameid = req.params.pageid;
   var Case = require('case');
   var isNumber = require('is-number');
 
   // If query IS passed into .find(), filters by the query parameters
-  ButtonsTest.find({"_id": unitnameid}, function (err, data) {
+  Test.find({"_id": unitnameid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {

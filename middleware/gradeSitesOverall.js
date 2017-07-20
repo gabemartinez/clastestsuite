@@ -4,7 +4,7 @@ var gradeSitesOverall = function(req, res, next) {
   var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
   mongoose.createConnection(mongoconnection);
 
-  var ButtonsTest = require('../models/ButtonsTest');
+  var Test = require('../models/Test');
 
   var Case = require('case');
   var isNumber = require('is-number');
@@ -19,7 +19,7 @@ var gradeSitesOverall = function(req, res, next) {
 
   allsitegradeobject.forEach(function(allsitesstuff) {
 
-  ButtonsTest.find({"siteID": allsitesstuff.siteid}, function (err, data) {
+  Test.find({"siteID": allsitesstuff.siteid}, function (err, data) {
 
       if (err) {
           res.status(500).send(err)

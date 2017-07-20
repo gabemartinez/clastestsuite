@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-var ButtonsTestSchema = new mongoose.Schema({
+var TestSchema = new mongoose.Schema({
   siteID: String,
   pageLink: String,
   results: [
@@ -19,4 +19,4 @@ var ButtonsTestSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('ButtonsTest', ButtonsTestSchema);
+module.exports = mongoose.model('Test', TestSchema);

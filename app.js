@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 // routes
 var index = require('./routes/index');
 
+// express server
 var app = express();
 
 // view engine setup

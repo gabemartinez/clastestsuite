@@ -8,7 +8,7 @@ var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastes
 mongoose.connect(mongoconnection);
 
 var Site = require('../models/Site');
-var ButtonsTest = require('../models/ButtonsTest');
+var Test = require('../models/Test');
 
 const Agenda = require('agenda');
 
@@ -35,7 +35,7 @@ var gradeSitesOverall = require('../middleware/gradeSitesOverall');
 
 /* GET index page. */
 router.get('/', function(req, res, next) {
-  res.render('../views/pages/testrunner');
+  res.render('../views/pages/index');
 });
 
 /* POST index page. */
@@ -70,7 +70,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
   // agenda process
 
-  res.render('../views/pages/testrunner-started', { site, thisId: thisSite._id });
+  res.render('../views/pages/started', { site, thisId: thisSite._id });
 });
 
 /* GET not webspark error page. */
@@ -99,7 +99,7 @@ router.get('/report/:reportid', gradeOverall, function(req, res, next) {
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
-  ButtonsTest.find({"siteID": reportid}, function (err, buttonstests) {
+  Test.find({"siteID": reportid}, function (err, buttonstests) {
       if (err) {
           res.status(500).send(err)
       } else {
@@ -119,7 +119,7 @@ router.get('/report-sortable/:reportid', gradeOverall, function(req, res, next) 
   // res.json({reportid});
 
   // If query IS passed into .find(), filters by the query parameters
-  ButtonsTest.find({"siteID": reportid}, function (err, buttonstests) {
+  Test.find({"siteID": reportid}, function (err, buttonstests) {
       if (err) {
           res.status(500).send(err)
       } else {
@@ -140,7 +140,7 @@ router.get('/report/:reportid/:pageid', gradeUnitName, gradeGlobalASULinks, grad
   var buttonsgrade = req.buttonsgrade;
 
   // If query IS passed into .find(), filters by the query parameters
-  ButtonsTest.find({"_id": pageid, "siteID": reportid}, function (err, buttonstests) {
+  Test.find({"_id": pageid, "siteID": reportid}, function (err, buttonstests) {
       if (err) {
           res.status(500).send(err)
       } else {
@@ -156,7 +156,7 @@ router.get('/unitnamereport/:reportid/:pageid/', gradeUnitName, function(req, re
   var unitnamegrade = req.unitnamegrade;
   var unitnamewithgrade = req.unitnamewithgrade;
 
-  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
+  Test.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
@@ -173,7 +173,7 @@ router.get('/globalasulinksreport/:reportid/:pageid/', gradeGlobalASULinks, func
   var globalasulinksgrade = req.globalasulinksgrade;
   var baselineLinksObject = JSON.parse(req.baselineLinksObject);
 
-  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
+  Test.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
@@ -190,7 +190,7 @@ router.get('/buttonsreport/:reportid/:pageid/', gradeButtons, function(req, res,
   var buttonsgrade = req.buttonsgrade;
   var buttonswithgrades = req.buttonswithgrades;
 
-  ButtonsTest.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
+  Test.findOne({'siteID': reportid, '_id': pageid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {

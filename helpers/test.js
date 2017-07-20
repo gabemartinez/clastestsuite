@@ -3,7 +3,7 @@ var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastes
 mongoose.connect(mongoconnection);
 
 var Site = require('../models/Site');
-var ButtonsTest = require('../models/ButtonsTest');
+var Test = require('../models/Test');
 
 var osmosis = require('osmosis');
 
@@ -36,7 +36,7 @@ module.exports = function(siteid) {
             // console.log(ourData);
 
             //
-            var testButtonsData = new ButtonsTest({ siteID: siteid, pageLink: element, results: ourData });
+            var testButtonsData = new Test({ siteID: siteid, pageLink: element, results: ourData });
             testButtonsData.save(function (err) {
               if (err) {
                 console.log(err);

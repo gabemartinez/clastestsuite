@@ -4,7 +4,7 @@ var gradeGlobalASULinks = function(req, res, next) {
   var mongoconnection = 'mongodb://clastest:blah33@ds143141.mlab.com:43141/clastestsuite';
   mongoose.createConnection(mongoconnection);
 
-  var ButtonsTest = require('../models/ButtonsTest');
+  var Test = require('../models/Test');
 
   // var baselineLinks = [ { text: 'ASU Home', link: '//www.asu.edu/' },
   // { text: 'News/Events',
@@ -63,7 +63,7 @@ var baselineLinks = [ 'ASU Home', 'News/Events', 'Academics', 'Research', 'Athle
   var unitnameid = req.params.pageid;
 
   // If query IS passed into .find(), filters by the query parameters
-  ButtonsTest.find({"_id": unitnameid}, function (err, data) {
+  Test.find({"_id": unitnameid}, function (err, data) {
       if (err) {
           res.status(500).send(err)
       } else {
