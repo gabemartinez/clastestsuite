@@ -8,8 +8,8 @@ var osmosis = require('osmosis');
 
         //osmosis requests building data
         osmosis
-        // .get('https://math.asu.edu/content/cryptology')
-        .get('https://math.asu.edu/degrees')
+        .get('https://math.asu.edu/content/mathematics-1')
+        // .get('https://math.asu.edu/degrees')
         // .set({
         //     'pageTitle': 'title',
         //     'unitName': '.header__sitename > a',
@@ -22,12 +22,13 @@ var osmosis = require('osmosis');
           'unitname': '.header__sitename > a',
           'unitnamealt': 'div.header__sitename > span'
         })
+        .find('#asu_hrd')        
         .set({
           'globalasulinks':
-            {
+            [{
               'text': 'a',
               'link': 'a@href'
-            }
+            }]
         })
         .delay(600)
         .data(function(ourData) {
