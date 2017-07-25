@@ -10,15 +10,39 @@
       <h4>Page ID: <%= pageid %></h4>
       <h4>Page Link: <a href="<%= buttonstests[0].pageLink %>" target="_blank"><%= buttonstests[0].pageLink %></a></h4>
       <h4>Page Title: <%= buttonstests[0].results[0].pageTitle %></h4>
-      <h2>Page Grade: <%= Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) %></h2>
+      <h2>Page Grade: <span <% if (Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) <= 70) { %>
+        class="bg-danger text-white"<% }
+        else if (Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) <= 80) { %>
+         class="bg-warning text-white"<% }
+       else { %>
+         class="bg-success text-white"<%
+       }%>><%= Math.round(((unitnamegrade+globalasulinksgrade+buttonsgrade)/300)*100) %></span></h2>
 
       <hr />
 
-      <h4><a href="/unitnamereport/<%= reportid %>/<%= pageid %>">Unit Name Grade</a>: <%= unitnamegrade %></h4>
+      <h4><a href="/unitnamereport/<%= reportid %>/<%= pageid %>">Unit Name Grade</a>: <span <% if (unitnamegrade <= 70) { %>
+        class="bg-danger text-white"<% }
+        else if (unitnamegrade <= 80) { %>
+         class="bg-warning text-white"<% }
+       else { %>
+         class="bg-success text-white"<%
+       }%>><%= unitnamegrade %></span></h4>
 
-      <h4><a href="/globalasulinksreport/<%= reportid %>/<%= pageid %>">Global ASU Links Grade</a>: <%= globalasulinksgrade %></h4>
+      <h4><a href="/globalasulinksreport/<%= reportid %>/<%= pageid %>">Global ASU Links Grade</a>: <span <% if (globalasulinksgrade <= 70) { %>
+        class="bg-danger text-white"<% }
+        else if (globalasulinksgrade <= 80) { %>
+         class="bg-warning text-white"<% }
+       else { %>
+         class="bg-success text-white"<%
+       }%>><%= globalasulinksgrade %></span></h4>
 
-      <h4><a href="/buttonsreport/<%= reportid %>/<%= pageid %>">Buttons Grade</a>: <%= buttonsgrade %></h4>
+      <h4><a href="/buttonsreport/<%= reportid %>/<%= pageid %>">Buttons Grade</a>: <span <% if (buttonsgrade <= 70) { %>
+        class="bg-danger text-white"<% }
+        else if (buttonsgrade <= 80) { %>
+         class="bg-warning text-white"<% }
+       else { %>
+         class="bg-success text-white"<%
+       }%>><%= buttonsgrade %></span></h4>
 
     </div>
 

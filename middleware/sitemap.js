@@ -3,8 +3,12 @@ var sitemap = function(req, res, next) {
   var request = require('request');
   var cheerio = require('cheerio');
 
+  function removeTrailingSlash(thisSite) {
+      return thisSite.replace(/\/$/, "");
+  }
+
   // var url = "https://clas.asu.edu";
-  var site = req.body.site;
+  var site = removeTrailingSlash(req.body.site);
 
   var sitemapLinks = [];
 
@@ -32,6 +36,7 @@ var sitemap = function(req, res, next) {
       });
 
       req.sitemapLinks = sitemapLinks;
+      req.site = removeTrailingSlash(req.body.site);
       next();
 
     };

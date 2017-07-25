@@ -41,7 +41,7 @@ router.get('/', function(req, res, next) {
 /* POST index page. */
 router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, next) {
 
-  var site = req.body.site;
+  var site = req.site;
   var sitemapLinks = req.sitemapLinks;
 
   var thisSite = new Site({ url: site, links: sitemapLinks });
@@ -56,8 +56,8 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   // agenda process
   var agenda = new Agenda({db: {address: mongoconnection}});
 
-  agenda.define('check dom', function(job, done) {
-    console.log('checking dom...');
+  agenda.define('running tests', function(job, done) {
+    console.log('running tests...');
     // console.log(job);
     var thisSiteID = thisSite._id;
     test(thisSiteID);
@@ -65,7 +65,7 @@ router.post('/', urlencodedParser, websparkcheck, sitemap, function(req, res, ne
   });
 
   agenda.on('ready', function() {
-    agenda.now('check dom');
+    agenda.schedule('in 10 seconds', 'running tests');
     agenda.start();
   });
   // agenda process
